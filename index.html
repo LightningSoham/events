@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Friendship Day | 2026</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Load FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Smooth moving gradient background for a premium feel */
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(-45deg, #020617, #111827, #1f2937, #0f172a);
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #e5e7eb;
+        }
+
+        /* Subtle fade-in animations */
+        .fade-in { animation: fadeIn 0.6s ease-out forwards; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Staggered loading for the info sections */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+
+        /* Custom scrollbar for a neat look */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #030712; }
+        ::-webkit-scrollbar-thumb { background: #374151; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #fbbf24; }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-amber-500/30">
+
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-gray-950/80 backdrop-blur-lg border-b border-gray-800 px-4 md:px-8 py-4 flex justify-between items-center transition-all duration-300 shadow-lg">
+        <div class="flex items-center gap-8">
+            <div class="text-gray-100 font-bold text-lg md:text-xl tracking-wide flex items-center gap-2">
+                <i class="fa-solid fa-gem text-amber-500 drop-shadow-md"></i>
+                <span>Friends</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-400">
+                <a href="#" class="hover:text-amber-400 transition-colors">Home</a>
+                <a href="#" class="hover:text-amber-400 transition-colors">About Us</a>
+                <button onclick="document.getElementById('firstName').value='friendship'; checkName();" class="text-amber-400 bg-amber-500/10 px-3 py-1.5 rounded-full border border-amber-500/20 hover:bg-amber-500/20 hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] transition-all cursor-pointer flex items-center gap-2">
+                    <i class="fa-solid fa-star text-xs"></i> Friendship Day 2026
+                </button>
+            </div>
+        </div>
+        <button onclick="goBack()" id="nav-return" class="hidden items-center gap-2 text-gray-300 bg-gray-900/80 hover:bg-gray-800 hover:text-amber-400 border border-gray-700 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 shadow-sm">
+            <i class="fa-solid fa-arrow-left"></i> <span class="hidden sm:inline">Return to Search</span><span class="sm:hidden">Back</span>
+        </button>
+    </nav>
+
+    <!-- Login / Verification View -->
+    <main class="flex-grow flex items-center justify-center p-6 w-full relative pt-20" id="login-view">
+        <div class="max-w-md w-full fade-in bg-gray-900/40 p-8 rounded-2xl border border-gray-800 backdrop-blur-md shadow-2xl">
+            <div class="mb-8 text-center">
+                <h1 class="text-3xl font-bold text-white mb-2 tracking-tight">Hello, my friend! </h1>
+                <p class="text-gray-400 text-sm md:text-base">Please enter your first name to access your dedicated information page.</p>
+            </div>
+            
+            <div class="space-y-5">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
+                    </div>
+                    <input type="text" id="firstName" placeholder="Enter first name..." 
+                        class="w-full pl-11 pr-4 py-3 bg-gray-950/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all shadow-sm">
+                </div>
+                
+                <p class="text-gray-400 text-sm text-center">
+                    Enter a name, or enter <strong class="text-amber-400 cursor-pointer hover:underline" onclick="document.getElementById('firstName').value='friendship'; checkName();">friendship</strong> for details on the importance of this day.
+                </p>
+                
+                <p id="error-message" class="text-rose-400 text-sm hidden font-medium flex items-center gap-2 bg-rose-500/10 p-2 rounded border border-rose-500/20">
+                    <i class="fa-solid fa-circle-exclamation"></i><span>Name not found in database.</span>
+                </p>
+                
+                <button onclick="checkName()" 
+                    class="w-full bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-gray-950 font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-amber-900/20">
+                    Proceed <i class="fa-solid fa-chevron-right text-sm"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Info Site View (Document/Article Style) -->
+    <main class="flex-grow items-start justify-center p-6 md:p-12 z-10 hidden w-full relative pt-24 md:pt-32" id="dashboard-view">
+        
+        <article class="w-full max-w-3xl mx-auto pb-16">
+            
+            <!-- Abstract celebratory image -->
+            <div class="w-full h-48 md:h-64 rounded-2xl overflow-hidden relative mb-12 shadow-2xl border border-gray-800 fade-in">
+                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop" alt="Celebration Lights" class="absolute inset-0 w-full h-full object-cover opacity-50 hover:scale-105 transition-transform duration-700 mix-blend-screen">
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-[#020617]/60 to-transparent"></div>
+                
+                <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                    <span class="px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold tracking-widest uppercase mb-4 backdrop-blur-sm shadow-sm">
+                        Specialy Made for you.
+                    </span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500 drop-shadow-lg tracking-tight">
+                        Happy Friendship Day!
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Profile Header -->
+            <header class="mb-12 border-b border-gray-800 pb-8 fade-in delay-100">
+                <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amber-400 mb-4 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+                    <i class="fa-solid fa-award"></i> My friend
+                </div>
+                <h1 id="display-fullname" class="text-4xl md:text-5xl font-bold text-white mb-3 tracking-tight">Name Surname</h1>
+                <p class="text-gray-400 text-sm md:text-base font-light">Friendshipday 2026</p>
+            </header>
+
+            <!-- Information Sections -->
+            <div class="space-y-12">
+                
+                <!-- Continuous Flowing Text Section (What I Like) -->
+                <section id="section-like" class="fade-in delay-200 pl-6 border-l-2 border-gray-700 hover:border-amber-400 transition-colors duration-300 group">
+                    <h2 class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-3 flex items-center gap-2 group-hover:text-amber-400 transition-colors">
+                        <i class="fa-solid fa-thumbs-up"></i> What I Like About You
+                    </h2>
+                    <p id="display-like" class="text-base md:text-lg text-gray-300 leading-relaxed font-light">
+                        INFORMATION goes here.
+                    </p>
+                </section>
+
+                <!-- Premium Cards Container -->
+                <div class="space-y-6 pt-6">
+                    
+                    <!-- Card: Thanksgiving (Warm/Amber Theme) -->
+                    <div id="section-thanks" class="fade-in delay-300 relative overflow-hidden border border-amber-900/40 rounded-2xl p-6 md:p-8 shadow-xl group transition-all duration-300 hover:border-amber-500/60">
+                        <!-- Background Theme Image -->
+                        <div class="absolute inset-0 z-0">
+                            <img src="https://images.unsplash.com/photo-1506804886640-379e436f56ce?auto=format&fit=crop&w=800&q=80" alt="Warm Autumn Glow" class="w-full h-full object-cover opacity-15 mix-blend-lighten group-hover:scale-105 transition-transform duration-700">
+                            <!-- Gradient Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-br from-amber-950/80 via-gray-950/90 to-gray-950/95"></div>
+                        </div>
+                        
+                        <!-- Content -->
+                        <div class="relative z-10">
+                            <h3 class="text-lg md:text-xl font-bold text-white mb-3 flex items-center gap-3 tracking-tight">
+                                <i class="fa-solid fa-hands-praying text-amber-500 drop-shadow-[0_0_10px_rgba(245,158,11,0.5)]"></i>
+                                <span id="title-thanks">Thanksgiving</span>
+                            </h3>
+                            <p id="display-thanks" class="text-gray-300 leading-relaxed font-light text-sm md:text-base">
+                                thxsec text goes here.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card: Funniest Moment (Playful/Fuchsia Theme) -->
+                    <div id="section-funny" class="fade-in delay-400 relative overflow-hidden border border-fuchsia-900/40 rounded-2xl p-6 md:p-8 shadow-xl group transition-all duration-300 hover:border-fuchsia-500/60">
+                        <!-- Background Theme Image -->
+                        <div class="absolute inset-0 z-0">
+                            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80" alt="Party Lights" class="w-full h-full object-cover opacity-15 mix-blend-lighten group-hover:scale-105 transition-transform duration-700">
+                            <!-- Gradient Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-br from-fuchsia-950/80 via-gray-950/90 to-gray-950/95"></div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="relative z-10">
+                            <h3 class="text-lg md:text-xl font-bold text-white mb-3 flex items-center gap-3 tracking-tight">
+                                <i class="fa-solid fa-face-smile-wink text-fuchsia-400 drop-shadow-[0_0_10px_rgba(232,121,249,0.5)]"></i>
+                                <span id="title-funny">Funniest Moment</span>
+                            </h3>
+                            <p id="display-funny" class="text-gray-300 leading-relaxed font-light text-sm md:text-base">
+                                FUNNY_INFO goes here.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card: A Wish For You (Cosmic/Indigo Theme) -->
+                    <div id="section-wish" class="fade-in delay-500 relative overflow-hidden border border-indigo-900/40 rounded-2xl p-6 md:p-8 shadow-xl group transition-all duration-300 hover:border-indigo-400/60">
+                        <!-- Background Theme Image -->
+                        <div class="absolute inset-0 z-0">
+                            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80" alt="Starry Night Galaxy" class="w-full h-full object-cover opacity-20 mix-blend-screen group-hover:scale-105 transition-transform duration-700">
+                            <!-- Gradient Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-br from-indigo-950/80 via-gray-950/90 to-gray-950/95"></div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="relative z-10">
+                            <h3 class="text-lg md:text-xl font-bold text-white mb-3 flex items-center gap-3 tracking-tight">
+                                <i class="fa-solid fa-star-and-crescent text-indigo-400 drop-shadow-[0_0_10px_rgba(129,140,248,0.5)]"></i>
+                                <span id="title-wish">A Wish For You</span>
+                            </h3>
+                            <p id="display-wish" class="text-gray-300 leading-relaxed font-light text-sm md:text-base">
+                                WISH_INFO goes here.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full text-center py-6 mt-auto border-t border-gray-800 bg-gray-950/50 relative z-10 backdrop-blur-md">
+        <p class="text-gray-500 text-sm">
+            Developed by <span class="text-amber-500 font-bold tracking-wide">Soham Deshmukh</span>
+        </p>
+    </footer>
+
+    <script>
+        // ==========================================
+        // SOHAM, ENTER YOUR INFORMATION HERE!
+        // To hide a section for a friend, just leave the text empty like this: ""
+        // ==========================================
+        
+        const friendsData = {
+            "rudra": { fullName: "Rudra Bharad", like: "Rudra is my best friend. He is very kind and always helps others but he talks too much about nonsence topic but i like them and he's very good at music drawing anime drawings.", thanks: "Thank you bro that youbecome my friend and made my school life better than I expected", funny: "I enjoyed the moment when he came to my home and we laughed too much on my jokes.", wish: "I wish that you'll always be happy and successful." },
+            "ridhima": { fullName: "Ridhima Shevadkar", like: "Ridhima has always has a unique perspective on things. I like her perspective of Helping others and very kind to others. She is very creative.", thanks: "Thanks for being my friend! and making our friends' school life better than they expected", funny: "I always enjoy roasting or rage bitting her.", wish: "I wish for you to always be happy and successful." },
+            "aanika": { fullName: "Aanika Kangude", like: "Aanika is very kind and always helps others. She has a unique perspective on things. She likes to sketch, play badminton, explore places and do more creative things. She is very clever and intelligent too. She is very kind and always helps others. ", thanks: "Thanks for being my friend! and giving me a perspective of seeing things differently.", funny: "I enjoy when we laugh while playing. like it is a memes, mimicry, jokes or moments.", wish: "I wish for you to always be happy and successful in any career you wanna make." },
+            "kashika": { fullName: "Kashika Shingi", like: "Kashika is very clever. She likes to play badminton, explore places and do more creative things. but she gets angry easily.", thanks: "Thanks for being my friend!", funny: "FUNNY_INFO", wish: "WISH_INFO" },
+            "sharvari": { fullName: "Sharvari Joshi", like: "Sharvari is very creative and always comes up with unique ideas. She likes to spend her time with her friends.She is very kind too but she fears of things which are not senceble to cry.", thanks: "Thanks for being my friend!", funny: "", wish: "i wish for you to always be happy and successful." },
+            "gayatri": { fullName: "Gayatri Kale", like: "Gayatri is very creative and always comes up with unique ideas and she always has a positive attitude. She likes to help others & learn new things. She shares her problem to everyone and finds solution and solves others problems too.", thanks: "Thanks for being my friend! and making our friends' our life better than we expected", funny: "I always enjoy to roast her and then make her happy again ", wish: "I wish for you to always be happy and successful in life." },
+            "naksh": { fullName: "Naksh Mankar", like: "Naksh is my one of best friends. He is very kind and always helps others. He is very funny and makes us enjoy the day. He's very intelligent, creative at making things.", thanks: "Thanks for being my friend! and making my life more funfull than I expected.", funny: "I enjoy when you start a very funy quarell", wish: "I wish that you'll become successful in every career you choose" },
+            "haaresh": { fullName: "Haaresh Borse", like: "Hareesh is one of my best friends. He is a very funny person. who makes us laugh when we play anything. He likes to play roblox and minecraft. He likes to draw and too creative in that. He's very intelligent and clever too. He helps people too", thanks: "Thanks for being my friend! and making my life more funfull than I expected.", funny: "I enjoy when we laugh on a meme, mimicry or jokes.", wish: "I wish that you'll always be happy and successful in any career you choose." },
+            "harsheel": { fullName: "Harsheel Borse", like: "Harsheel is one of my best friends. He's too serious about everything. He likes to play roblox and likes to play games. He's Creative, kind & intelligent. He always helps others.", thanks: "Thanks for being my friend! and making my life better than I expected.", funny: "I enjoy when we laugh on a meme, mimicry or jokes.", wish: "I wish that you'll always be happy and successful in any career you choose." },
+            "vedant": { fullName: "Vedant Kandhare", like: "Vedant is my one of best friends. He is very kind and always helps others. He is very funny and makes us enjoy the day.", thanks: "Thanks for being my friend! and making my life more funfull", funny: "When we were enjoying while drawing in elementary extra classes.", wish: "I wish for you to always be happy and successful." },
+            "sarthak": { fullName: "Sarthak Parge", like: "Sarthak is my one of best friends. He is very kind and always helps others. He is very funny and makes us enjoy", thanks: "Thanks for being my friend! and making my life more funfull", funny: "When we were enjoying while drawing in elementary extra classes.", wish: "I wish for you to always be happy and successful." },
+            
+            // Example of conditional hiding: Dhaval's "funny" is empty, so the entire Funniest Moment card will disappear!
+            "dhaval": { fullName: "Dhaval Jadhav", like: "Dhaval is my best friend. He is very kind and always helps others. He makes me laugh and enjoys it too.", thanks: "Thanks for being my friend! and making my life better than I expected", funny: "", wish: "I wish that you'll always be happy and successful in you entire life. " },
+            
+            "neal": { fullName: "Neal Kadam", like: "Neal is my best friend. He likes to make everyone laugh. When he's in mood of Masti, he's the most fun! and when he's serious, he's the most serious. He always listens to everyone not in his mood.", thanks: "I thank to you for being by friend & making my school life better.", funny: "", wish: "I wish that you'll always be happy and successful." },
+            "soham": { fullName: "Soham Deshmukh", like: "This layout features premium dynamically named cards with an animated background.", thanks: "Thanks for the feedback to make it better.", funny: "Re-coding the site multiple times.", wish: "Enjoy the new seamless reading experience." },
+            
+            // The 15th Section
+            "friendship": { 
+                fullName: "The Importance of Friendship", 
+                like: "Friendship is the invisible thread that binds our hearts together. It gives us a chosen family, providing unconditional support, comfort, and a safe space to be entirely ourselves without fear of judgment.", 
+                thanks: "Today is a day to express profound gratitude for those who stand by us. We give thanks for the shoulders to cry on, the hands that lift us up, and the hearts that understand us even when we are silent.", 
+                funny: "Beyond the serious moments, friendship is built on shared laughter, ridiculous inside jokes, and memories of times we laughed so hard we couldn't breathe. These joyous moments are the fuel that keeps the bond alive.", 
+                wish: "May Friendship Day 2026 remind us all to cherish these invaluable connections. Take a moment today to reach out, reconnect, and celebrate the beautiful souls who make your life's journey worthwhile." 
+            }
+        };
+
+        // ==========================================
+        // LOGIC - DO NOT EDIT BELOW UNLESS REQUIRED
+        // ==========================================
+        
+        const loginView = document.getElementById('login-view');
+        const dashboardView = document.getElementById('dashboard-view');
+        const errorMsg = document.getElementById('error-message');
+        const nameInput = document.getElementById('firstName');
+        const navReturn = document.getElementById('nav-return');
+
+        // Allow pressing Enter key to submit
+        nameInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                checkName();
+            }
+        });
+
+        function checkName() {
+            // Get value, trim whitespace, and convert to lowercase
+            const inputName = nameInput.value.trim().toLowerCase();
+            
+            if(inputName === '') {
+                showError("Please enter a name first.");
+                return;
+            }
+
+            if (friendsData.hasOwnProperty(inputName)) {
+                hideError();
+                populateData(friendsData[inputName], inputName);
+                
+                // Switch Views
+                loginView.classList.add('hidden');
+                loginView.classList.remove('flex');
+                
+                dashboardView.classList.remove('hidden');
+                dashboardView.classList.add('flex');
+                dashboardView.style.flexDirection = 'column';
+                
+                // Show Topbar Return Button
+                navReturn.classList.remove('hidden');
+                navReturn.classList.add('flex');
+                
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                showError("Name not found. Please verify spelling.");
+            }
+        }
+
+        // Helper Function to handle displaying or hiding sections based on text content
+        function setupSection(idPrefix, dataContent, titleElement, titleText) {
+            const section = document.getElementById(`section-${idPrefix}`);
+            const display = document.getElementById(`display-${idPrefix}`);
+            
+            // If data is present and not empty, show it. Otherwise, completely hide the section.
+            if (dataContent && dataContent.trim() !== "") {
+                section.style.display = 'block';
+                display.textContent = dataContent;
+                if (titleElement) titleElement.textContent = titleText;
+            } else {
+                section.style.display = 'none';
+            }
+        }
+
+        function populateData(data, inputKey) {
+            // Get just the first name for personalized titles
+            const firstName = data.fullName.split(" ")[0];
+
+            // Set main header
+            document.getElementById('display-fullname').textContent = data.fullName;
+
+            // Setup 'What I like' (no title changes needed for this one)
+            setupSection('like', data.like, null, null);
+
+            // Set personalized card titles and visibility dynamically
+            if (inputKey === "friendship") {
+                setupSection('thanks', data.thanks, document.getElementById('title-thanks'), "Thanksgiving");
+                setupSection('funny', data.funny, document.getElementById('title-funny'), "Funniest Moments");
+                setupSection('wish', data.wish, document.getElementById('title-wish'), "Our Wish");
+            } else {
+                setupSection('thanks', data.thanks, document.getElementById('title-thanks'), `Thanksgiving for ${firstName}`);
+                setupSection('funny', data.funny, document.getElementById('title-funny'), `${firstName}'s Funniest Moment`);
+                setupSection('wish', data.wish, document.getElementById('title-wish'), `A Wish For ${firstName}`);
+            }
+        }
+
+        function showError(msg) {
+            errorMsg.querySelector('span').textContent = msg;
+            errorMsg.classList.remove('hidden');
+            nameInput.classList.add('border-rose-500', 'focus:ring-rose-500');
+            nameInput.classList.remove('border-gray-700', 'focus:ring-amber-500');
+        }
+
+        function hideError() {
+            errorMsg.classList.add('hidden');
+            nameInput.classList.remove('border-rose-500', 'focus:ring-rose-500');
+            nameInput.classList.add('border-gray-700', 'focus:ring-amber-500');
+        }
+
+        function goBack() {
+            nameInput.value = '';
+            hideError();
+            
+            dashboardView.classList.add('hidden');
+            dashboardView.classList.remove('flex');
+            
+            loginView.classList.remove('hidden');
+            loginView.classList.add('flex');
+            
+            navReturn.classList.add('hidden');
+            navReturn.classList.remove('flex');
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
