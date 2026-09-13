@@ -3,383 +3,2258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Friendship Day | 2026</title>
+    <title>Lord Ganesha: The Supreme Guide | Divine Wisdom & Sacred Forms</title>
     
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Poppins for headings, Noto Sans Devanagari for HI/MR, Merriweather for English literary body -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Load Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Load FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <style>
-        /* Smooth moving gradient background for a premium feel */
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        :root {
+            /* Color Palette */
+            --primary-orange: #FF6B35;
+            --secondary-orange: #F7C59F;
+            --deep-red: #7A0C16;
+            --gold: #FFD700;
+            --gold-light: #FFE873;
+            --marigold: #EAA221;
+            --bg-light: #FFF8F0;
+            --text-dark: #2C1A1D;
+            --text-light: #FDFDFD;
+            --card-bg: rgba(255, 255, 255, 0.96);
+            --glass-bg: rgba(30, 8, 11, 0.65);
+            --glass-border: rgba(255, 215, 0, 0.28);
+            --dark-surface: #1E0D10;
+            
+            /* Typography */
+            --font-heading-en: 'Poppins', sans-serif;
+            --font-body-en: 'Merriweather', serif;
+            --font-devanagari: 'Noto Sans Devanagari', sans-serif;
+
+            /* Spacing & Radii */
+            --border-radius-xl: 24px;
+            --border-radius-lg: 18px;
+            --border-radius-md: 12px;
+            --border-radius-sm: 8px;
+            --transition-speed: 0.3s;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(-45deg, #020617, #111827, #1f2937, #0f172a);
-            background-size: 400% 400%;
-            animation: gradientMove 15s ease infinite;
+            font-family: var(--font-body-en);
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            overflow-x: hidden;
+            line-height: 1.75;
+            font-size: 15px;
+            transition: font-family 0.3s ease;
+        }
+        
+        body.lang-hi, body.lang-mr {
+            font-family: var(--font-devanagari);
+            font-size: 15.5px;
+            line-height: 1.85;
+        }
+
+        body.lang-hi h1, body.lang-hi h2, body.lang-hi h3, body.lang-hi h4, body.lang-hi .nav-links li a,
+        body.lang-mr h1, body.lang-mr h2, body.lang-mr h3, body.lang-mr h4, body.lang-mr .nav-links li a {
+            font-family: var(--font-devanagari);
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-light);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--marigold);
+            border-radius: 8px;
+            border: 2px solid var(--bg-light);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-orange);
+        }
+
+        ::selection {
+            background: var(--primary-orange);
+            color: var(--text-light);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading-en);
+            color: var(--deep-red);
+            margin-bottom: 1.2rem;
+            line-height: 1.25;
+        }
+
+        h1 { 
+            font-size: clamp(1.75rem, 3.8vw, 3.4rem); 
+            font-weight: 800; 
+            letter-spacing: 1px;
+        }
+        
+        h2 { 
+            font-size: clamp(1.6rem, 2.8vw, 2.4rem); 
+            font-weight: 700; 
+            text-align: center; 
+            position: relative; 
+            padding-bottom: 14px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3.5px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            border-radius: 2px;
+        }
+        
+        h3 { 
+            font-size: clamp(1.2rem, 1.8vw, 1.6rem); 
+            font-weight: 600; 
+            color: var(--primary-orange);
+        }
+        
+        p { 
+            margin-bottom: 1.2rem; 
+            text-align: justify; 
+        }
+
+        a { 
+            text-decoration: none; 
+            color: inherit; 
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 4rem 0;
+        }
+
+        #progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: transparent;
+            z-index: 10001;
+        }
+
+        #progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--gold), var(--primary-orange), var(--deep-red));
+            width: 0%;
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 0 10px var(--primary-orange);
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.1rem 4%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 9999;
+            transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(22, 6, 9, 0.45);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+        }
+
+        nav.scrolled {
+            background: rgba(255, 248, 240, 0.98);
+            backdrop-filter: blur(16px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+            border-bottom: 1px solid rgba(255, 107, 53, 0.2);
+            padding: 0.85rem 4%;
+        }
+
+        .logo {
+            font-family: var(--font-heading-en);
+            font-size: clamp(1.25rem, 1.8vw, 1.6rem);
+            font-weight: 800;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color var(--transition-speed) ease;
+            z-index: 101;
+        }
+
+        nav.scrolled .logo {
+            color: var(--deep-red);
+            text-shadow: none;
+        }
+
+        .logo svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--gold);
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+            transition: fill var(--transition-speed) ease;
+        }
+        
+        nav.scrolled .logo svg {
+            fill: var(--primary-orange);
+            filter: none;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.8rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links li a {
+            font-family: var(--font-heading-en);
+            font-weight: 600;
+            font-size: 0.92rem;
+            color: rgba(255, 255, 255, 0.92);
+            position: relative;
+            padding: 0.4rem 0.2rem;
+            transition: color var(--transition-speed) ease;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            white-space: nowrap;
+        }
+
+        nav.scrolled .nav-links li a {
+            color: var(--text-dark);
+        }
+
+        .nav-links li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links li a:hover::after {
+            width: 100%;
+        }
+        
+        nav.scrolled .nav-links li a::after {
+            background: var(--primary-orange);
+        }
+
+        nav.scrolled .nav-links li a:hover {
+            color: var(--primary-orange);
+        }
+
+        .lang-switcher {
+            position: relative;
+            z-index: 101;
+        }
+
+        .lang-switcher select {
+            appearance: none;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--gold);
+            color: var(--text-light);
+            padding: 0.42rem 1.8rem 0.42rem 0.9rem;
+            border-radius: 50px;
+            font-family: var(--font-heading-en);
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .lang-switcher select option {
+            background: #231114;
+            color: #FFF;
+        }
+
+        nav.scrolled .lang-switcher select {
+            background: #FFF;
+            color: var(--deep-red);
+            border-color: var(--primary-orange);
+        }
+
+        nav.scrolled .lang-switcher select option {
+            background: #FFF;
+            color: var(--text-dark);
+        }
+
+        .lang-switcher::after {
+            content: '▾';
+            font-size: 0.85rem;
+            color: var(--gold);
+            position: absolute;
+            right: 11px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+        
+        nav.scrolled .lang-switcher::after {
+            color: var(--primary-orange);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            z-index: 102;
+            padding: 6px;
+            border-radius: 6px;
+        }
+
+        .menu-toggle span {
+            width: 26px;
+            height: 2.5px;
+            background-color: var(--text-light);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        nav.scrolled .menu-toggle span {
+            background-color: var(--deep-red);
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(7.5px) rotate(45deg);
+        }
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-7.5px) rotate(-45deg);
+        }
+
+        #greetings {
+            position: relative;
             min-height: 100vh;
+            padding: 6rem 1rem 3rem;
             display: flex;
             flex-direction: column;
-            color: #e5e7eb;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            background: radial-gradient(circle at center, #421418 0%, #150507 100%); 
         }
 
-        /* Subtle fade-in animations */
-        .fade-in { animation: fadeIn 0.6s ease-out forwards; }
+        #hero-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            padding: 2.2rem 2.2rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius-xl);
+            backdrop-filter: blur(14px);
+            box-shadow: 0 16px 45px rgba(0, 0, 0, 0.5);
+            max-width: 90%;
+            width: 680px;
+            animation: fadeInScale 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .hero-title {
+            color: var(--gold);
+            text-shadow: 0 2px 20px rgba(255, 215, 0, 0.4), 0 3px 6px rgba(0,0,0,0.8);
+            margin-bottom: 0.8rem;
+            line-height: 1.18;
+        }
         
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
+        .hero-subtitle {
+            font-family: var(--font-heading-en);
+            font-size: clamp(0.95rem, 1.8vw, 1.25rem);
+            color: #F8ECE8;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
         }
 
-        /* Staggered loading for the info sections */
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-300 { animation-delay: 0.3s; }
-        .delay-400 { animation-delay: 0.4s; }
-        .delay-500 { animation-delay: 0.5s; }
+        .om-symbol {
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            color: var(--gold-light);
+            text-shadow: 0 0 25px rgba(255, 107, 53, 0.7);
+            margin-bottom: 0.5rem;
+            display: inline-block;
+            animation: pulseGlow 3s infinite alternate;
+        }
 
-        /* Custom scrollbar for a neat look */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #030712; }
-        ::-webkit-scrollbar-thumb { background: #374151; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #fbbf24; }
+        .scroll-down {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            animation: bounce 2.2s infinite;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .scroll-down svg {
+            width: 36px;
+            height: 36px;
+            fill: var(--gold-light);
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));
+            transition: all 0.3s ease;
+        }
+        
+        .scroll-down:hover svg {
+            fill: var(--primary-orange);
+            transform: scale(1.15);
+        }
+
+        #stories-info {
+            background-image: url('data:image/svg+xml;utf8,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="30" r="1.2" fill="%23f7c59f" opacity="0.35"/></svg>');
+            background-color: var(--bg-light);
+            position: relative;
+        }
+
+        .story-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 2.8rem;
+            margin-top: 3rem;
+        }
+
+        .story-card {
+            background: #ffffff;
+            border-radius: var(--border-radius-lg);
+            padding: 2.4rem;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.05);
+            border-left: 6px solid var(--primary-orange);
+            position: relative;
+            overflow: hidden;
+            transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.09);
+        }
+
+        .story-card::before {
+            content: 'ॐ';
+            position: absolute;
+            top: -25px;
+            right: -15px;
+            font-size: 15rem;
+            color: rgba(234, 162, 33, 0.04);
+            font-family: sans-serif;
+            pointer-events: none;
+            z-index: 0;
+            transform: rotate(12deg);
+        }
+
+        .story-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .story-content h3 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 2px dashed var(--secondary-orange);
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+
+        .story-content h3 svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--deep-red);
+            flex-shrink: 0;
+        }
+
+        .story-content p {
+            font-size: 1.02rem;
+            color: #42362E;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .story-content p:first-of-type::first-letter {
+            font-size: 3rem;
+            font-family: var(--font-heading-en);
+            font-weight: 800;
+            color: var(--primary-orange);
+            float: left;
+            line-height: 0.9;
+            padding-right: 10px;
+            padding-top: 4px;
+        }
+
+        .legend-tag {
+            display: inline-block;
+            background: #FFF3E6;
+            color: #C04E1F;
+            font-family: var(--font-heading-en);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+            border: 1px solid rgba(255, 107, 53, 0.25);
+        }
+
+        .regional-summary {
+            background: linear-gradient(135deg, #E68A00 0%, var(--primary-orange) 100%);
+            border-radius: var(--border-radius-lg);
+            padding: 2.2rem;
+            color: white;
+            margin-top: 3.5rem;
+            box-shadow: 0 15px 35px rgba(234, 162, 33, 0.28);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .regional-summary h3 {
+            color: white;
+            border-bottom: none;
+            margin-bottom: 0.8rem;
+        }
+
+        .regional-summary p {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.05rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        #ashtavinayaka {
+            background-color: #FAF5EE;
+            padding: 5rem 0;
+            border-top: 1px solid rgba(0,0,0,0.06);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .clarification-note {
+            font-size: 0.85rem;
+            color: #777;
+            text-align: center;
+            max-width: 800px;
+            margin: 3.5rem auto 0;
+            padding: 1.5rem 1rem 0;
+            border-top: 1px dashed rgba(0,0,0,0.12);
+            line-height: 1.6;
+        }
+
+        .clarification-note strong {
+            color: var(--deep-red);
+        }
+
+        .pilgrimage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .pilgrim-card {
+            background: white;
+            border: 1px solid rgba(234, 162, 33, 0.2);
+            border-radius: var(--border-radius-sm);
+            padding: 1rem 0.5rem;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .pilgrim-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary-orange);
+        }
+
+        .pilgrim-card h5 {
+            color: var(--deep-red);
+            font-size: 1.05rem;
+            margin-bottom: 0.2rem;
+            font-family: var(--font-heading-en);
+        }
+
+        .pilgrim-card span {
+            color: #666;
+            font-size: 0.8rem;
+        }
+
+        .avatars8-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .avatar8-card {
+            background: white;
+            border-radius: var(--border-radius-md);
+            padding: 1.8rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 8px 22px rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .avatar8-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 32px rgba(0,0,0,0.08);
+            border-color: var(--secondary-orange);
+        }
+
+        .avatar8-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.2rem;
+            background: var(--bg-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--gold);
+        }
+
+        .avatar8-icon svg {
+            width: 34px;
+            height: 34px;
+            fill: var(--primary-orange);
+        }
+
+        .avatar8-card h4 {
+            color: var(--deep-red);
+            font-size: 1.35rem;
+            margin-bottom: 0.4rem;
+        }
+        
+        .avatar8-sub {
+            font-size: 0.85rem;
+            color: var(--marigold);
+            font-weight: 700;
+            margin-bottom: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .avatar8-card p {
+            font-size: 0.92rem;
+            color: #555;
+            text-align: left;
+            line-height: 1.65;
+            flex-grow: 1;
+        }
+
+        /* Compact Pilgrimage Circuit Styles */
+        .pilgrimage-section {
+            margin-top: 4.5rem;
+            padding-top: 3.5rem;
+            border-top: 1px dashed rgba(234, 162, 33, 0.4);
+        }
+
+        .pilgrimage-section h3 {
+            color: var(--deep-red);
+            font-size: 1.55rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .pilgrimage-section p {
+            color: #666;
+            font-size: 0.95rem;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .pilgrimage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.2rem;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .pilgrimage-card {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(234, 162, 33, 0.25);
+            border-radius: var(--border-radius-sm);
+            padding: 1.2rem 0.8rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .pilgrimage-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary-orange);
+            background: #fff;
+        }
+
+        .pilgrimage-card h4 {
+            color: var(--primary-orange);
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .pilgrimage-card span {
+            font-size: 0.85rem;
+            color: #8C8079;
+            font-weight: 500;
+        }
+
+        #avatars {
+            background-color: var(--dark-surface);
+            color: var(--bg-light);
+            padding: 5.5rem 0;
+        }
+
+        #avatars h2 {
+            color: var(--gold);
+        }
+        
+        #avatars h2::after {
+            background: linear-gradient(90deg, transparent, var(--primary-orange), transparent);
+        }
+        
+        .avatars-intro {
+            text-align: center;
+            max-width: 860px;
+            margin: 0 auto 2.5rem auto;
+            color: #DDD0C8;
+            font-size: 1.05rem;
+            line-height: 1.75;
+        }
+
+        .filter-section {
+            max-width: 980px;
+            margin: 0 auto 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            align-items: center;
+        }
+
+        .search-box {
+            position: relative;
+            width: 100%;
+            max-width: 540px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.95rem 3rem 0.95rem 1.4rem;
+            border-radius: 50px;
+            border: 2px solid rgba(255, 215, 0, 0.4);
+            background: rgba(0,0,0,0.5);
+            color: white;
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .search-box input:focus {
+            border-color: var(--gold);
+            background: rgba(0,0,0,0.7);
+            box-shadow: 0 0 18px rgba(255, 215, 0, 0.25);
+        }
+        
+        .search-box input::placeholder {
+            color: #A89F9A;
+        }
+
+        .search-box svg {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 22px;
+            height: 22px;
+            fill: #C0B4AC;
+        }
+
+        .search-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            color: #C0B4AC;
+            font-size: 0.92rem;
+            padding: 0 0.5rem;
+        }
+
+        .category-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .chip {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 215, 0, 0.25);
+            color: #EADCD4;
+            padding: 0.35rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.82rem;
+            font-family: var(--font-heading-en);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .chip:hover, .chip.active {
+            background: var(--primary-orange);
+            color: #FFF;
+            border-color: var(--primary-orange);
+            box-shadow: 0 2px 10px rgba(255, 107, 53, 0.4);
+        }
+
+        /* 32 Forms Grid: 2-3 Columns responsive instead of 1 endless column */
+        .forms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+            gap: 1.4rem;
+            margin-top: 1rem;
+        }
+
+        .roop-card {
+            background: rgba(36, 15, 19, 0.75);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            backdrop-filter: blur(8px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .roop-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.25);
+        }
+
+        .roop-header {
+            padding: 1.2rem 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 1.1rem;
+            cursor: pointer;
+            background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0));
+            user-select: none;
+        }
+
+        .roop-number {
+            background: linear-gradient(135deg, var(--gold), var(--primary-orange));
+            color: #1A070A;
+            font-family: var(--font-heading-en);
+            font-weight: 800;
+            font-size: 0.95rem;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .roop-icon {
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.35);
+            border-radius: 50%;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            flex-shrink: 0;
+        }
+
+        .roop-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--gold);
+        }
+
+        .roop-title {
+            flex-grow: 1;
+        }
+
+        .roop-title h3 {
+            color: var(--gold);
+            font-size: 1.15rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .roop-title span {
+            color: #CFC2BA;
+            font-size: 0.82rem;
+            font-family: var(--font-heading-en);
+            letter-spacing: 0.4px;
+        }
+
+        .expand-icon {
+            color: var(--gold-light);
+            font-size: 1.6rem;
+            font-weight: 300;
+            line-height: 1;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .roop-card.expanded .expand-icon {
+            transform: rotate(45deg);
+            color: var(--primary-orange);
+        }
+
+        .roop-details {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            padding: 0 1.4rem;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .roop-card.expanded .roop-details {
+            max-height: 500px;
+            padding: 0.8rem 1.4rem 1.4rem 1.4rem;
+            opacity: 1;
+            border-top: 1px dashed rgba(255,255,255,0.12);
+        }
+
+        .roop-details p {
+            color: #E2D7D0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin: 0;
+            text-align: left;
+        }
+
+        /* Empty Search State */
+        .empty-state {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 3.5rem 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: var(--border-radius-lg);
+            border: 1px dashed rgba(255, 215, 0, 0.3);
+        }
+
+        .empty-state svg {
+            width: 48px;
+            height: 48px;
+            fill: var(--gold);
+            margin-bottom: 1rem;
+            opacity: 0.7;
+        }
+
+        .empty-state h4 {
+            color: var(--gold);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .empty-state p {
+            text-align: center;
+            color: #AAA;
+            margin-bottom: 1.2rem;
+        }
+
+        .btn-reset {
+            background: linear-gradient(135deg, var(--gold), var(--primary-orange));
+            color: #1B0709;
+            border: none;
+            padding: 0.6rem 1.4rem;
+            border-radius: 30px;
+            font-weight: 700;
+            font-family: var(--font-heading-en);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .btn-reset:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #110507;
+            color: #CFC2BA;
+            padding: 4.5rem 5% 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--deep-red), var(--primary-orange), var(--gold), var(--primary-orange), var(--deep-red));
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2.8rem;
+            margin-bottom: 3.5rem;
+            text-align: left;
+        }
+
+        .footer-col h4 {
+            color: var(--gold);
+            font-size: 1.35rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .footer-col p {
+            font-size: 0.94rem;
+            line-height: 1.75;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #B5A8A0;
+            transition: all 0.25s ease;
+            display: inline-block;
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+            padding-left: 6px;
+        }
+        
+        .chant-box {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            padding: 1.2rem;
+            border-radius: var(--border-radius-md);
+        }
+
+        .chant-sanskrit {
+            font-family: var(--font-devanagari);
+            font-size: 1.1rem;
+            color: var(--gold-light);
+            font-weight: 600;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .chant-translit {
+            font-style: italic;
+            font-size: 0.86rem;
+            color: #E2D7D0;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .bija-mantra {
+            font-family: var(--font-devanagari);
+            font-size: 1.6rem;
+            color: var(--primary-orange);
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-align: center;
+            text-shadow: 0 0 12px rgba(255, 107, 53, 0.4);
+            padding-top: 0.4rem;
+            border-top: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+
+        .bija-translit {
+            font-family: var(--font-heading-en);
+            font-size: 0.82rem;
+            letter-spacing: 1px;
+            color: var(--gold);
+            text-align: center;
+            margin-top: 0.2rem;
+            text-transform: uppercase;
+        }
+
+        .developer-credit {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 2rem;
+            font-family: var(--font-heading-en);
+            font-size: 0.9rem;
+            color: #8C8079;
+        }
+        
+        .developer-credit span {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        @keyframes fadeInScale {
+            0% { opacity: 0; transform: scale(0.94) translateY(18px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-12px) translateX(-50%); }
+            60% { transform: translateY(-6px) translateX(-50%); }
+        }
+
+        @keyframes pulseGlow {
+            0% { text-shadow: 0 0 12px rgba(255, 107, 53, 0.4); transform: scale(1); }
+            100% { text-shadow: 0 0 24px rgba(255, 215, 0, 0.7); transform: scale(1.04); }
+        }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: all 0.7s cubic-bezier(0.3, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Polished Responsive Breakpoint at 992px to prevent cramped tablet navbar */
+        @media (max-width: 992px) {
+            .menu-toggle { display: flex; }
+            
+            .nav-right {
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: rgba(26, 8, 12, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                justify-content: center;
+                gap: 1.5rem;
+                padding: 2rem;
+                transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+                box-shadow: -8px 0 25px rgba(0,0,0,0.5);
+                border-left: 1px solid rgba(255, 215, 0, 0.2);
+                z-index: 100;
+            }
+
+            nav.active .nav-links {
+                right: 0;
+            }
+
+            .nav-links li { width: 100%; text-align: left; }
+
+            .nav-links li a {
+                display: block;
+                padding: 0.8rem 0;
+                font-size: 1.05rem;
+                color: #F5EAE4;
+                border-bottom: 1px solid rgba(255,255,255,0.06);
+            }
+
+            .nav-links li a:hover {
+                color: var(--gold);
+                padding-left: 6px;
+            }
+
+            nav.scrolled .nav-links li a {
+                color: #F5EAE4;
+            }
+
+            .hero-content {
+                padding: 1.8rem 1.4rem;
+                width: 94%;
+            }
+
+            .forms-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.7rem; }
+            .hero-subtitle { font-size: 0.95rem; }
+            .story-card { padding: 1.6rem 1.2rem; }
+            .story-content h3 { font-size: 1.25rem; }
+            .story-card::before { font-size: 9rem; right: -20px; }
+            .forms-grid { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr; gap: 2rem; }
+            .clarification-banner { padding: 1.1rem; }
+        }
     </style>
 </head>
-<body class="antialiased overflow-x-hidden selection:bg-amber-500/30">
+<body class="lang-en">
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
 
-    <!-- Top Navigation Bar -->
-    <nav class="fixed top-0 left-0 w-full z-50 bg-gray-950/80 backdrop-blur-lg border-b border-gray-800 px-4 md:px-8 py-4 flex justify-between items-center transition-all duration-300 shadow-lg">
-        <div class="flex items-center gap-8">
-            <div class="text-gray-100 font-bold text-lg md:text-xl tracking-wide flex items-center gap-2">
-                <i class="fa-solid fa-gem text-amber-500 drop-shadow-md"></i>
-                <span>Friends</span>
+    <nav id="navbar">
+        <a href="#greetings" class="logo">
+            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path d="M256,0 C167.6,0 96,71.6 96,160 C96,183.8 101.4,206.2 110.8,226.3 C86.5,233.1 68,255.4 68,282.6 C68,314.9 94.3,341.3 126.6,341.3 C132.3,341.3 137.8,340.4 143,338.8 C144.1,388.5 185.3,428.6 235.6,428.6 L235.6,469.3 C235.6,492.8 254.8,512 278.3,512 C301.8,512 321,492.8 321,469.3 L321,419.6 C362.4,402.7 392.2,363.3 396.4,316.6 C422.3,311.1 442,288.1 442,260.6 C442,229.4 416.7,204.1 385.5,204.1 C383.1,204.1 380.8,204.3 378.5,204.6 C373.9,189.6 371.3,174 371.3,158 C371.3,70.7 296.3,0 256,0 Z M256,42.6 C285.8,42.6 329.8,94.9 329.8,158 C329.8,172 327,185.5 322,198 C302.2,207.2 280,212.4 256.7,212.4 C218.4,212.4 183.2,198.8 156.4,175.7 C147.2,168.1 138.6,159.2 138.6,160 C138.6,96.3 192.3,42.6 256,42.6 Z" />
+            </svg>
+            <span data-i18n="nav_brand">Vighnaharta</span>
+        </a>
+        
+        <div class="nav-right">
+            <div class="lang-switcher">
+                <select id="lang-select" onchange="switchLanguage(this.value)" aria-label="Select Language">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी (Hindi)</option>
+                    <option value="mr">मराठी (Marathi)</option>
+                </select>
             </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#greetings" data-i18n="nav_home">Greetings</a></li>
+                <li><a href="#stories-info" data-i18n="nav_stories">Sacred Lore</a></li>
+                <li><a href="#ashtavinayaka" data-i18n="nav_avatars">8 Divine Avatars</a></li>
+                <li><a href="#avatars" data-i18n="nav_roops">32 Sacred Forms</a></li>
+            </ul>
             
-            <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-400">
-                <a href="#" class="hover:text-amber-400 transition-colors">Home</a>
-                <a href="#" class="hover:text-amber-400 transition-colors">About Us</a>
-                <button onclick="document.getElementById('firstName').value='friendship'; checkName();" class="text-amber-400 bg-amber-500/10 px-3 py-1.5 rounded-full border border-amber-500/20 hover:bg-amber-500/20 hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] transition-all cursor-pointer flex items-center gap-2">
-                    <i class="fa-solid fa-star text-xs"></i> Friendship Day 2026
-                </button>
+            <div class="menu-toggle" id="mobile-menu" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-        <button onclick="goBack()" id="nav-return" class="hidden items-center gap-2 text-gray-300 bg-gray-900/80 hover:bg-gray-800 hover:text-amber-400 border border-gray-700 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 shadow-sm">
-            <i class="fa-solid fa-arrow-left"></i> <span class="hidden sm:inline">Return to Search</span><span class="sm:hidden">Back</span>
-        </button>
     </nav>
 
-    <!-- Login / Verification View -->
-    <main class="flex-grow flex items-center justify-center p-6 w-full relative pt-20" id="login-view">
-        <div class="max-w-md w-full fade-in bg-gray-900/40 p-8 rounded-2xl border border-gray-800 backdrop-blur-md shadow-2xl">
-            <div class="mb-8 text-center">
-                <h1 class="text-3xl font-bold text-white mb-2 tracking-tight">Hello, my friend! </h1>
-                <p class="text-gray-400 text-sm md:text-base">Please enter your first name to access your dedicated information page.</p>
+    <header id="greetings">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-content">
+            <div class="om-symbol">ॐ</div>
+            <h1 class="hero-title" data-i18n="hero_title">Happy Ganesh Chaturthi</h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">May Lord Ganesha remove all obstacles from your path and bless you with infinite wisdom, health, and prosperity.</p>
+        </div>
+        <div class="scroll-down" onclick="document.getElementById('stories-info').scrollIntoView();" title="Scroll Down">
+            <svg viewBox="0 0 24 24">
+                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+            </svg>
+        </div>
+    </header>
+
+    <section id="stories-info" class="container">
+        <h2 class="reveal" data-i18n="section_stories_title">Divine Legends & Sacred Lore</h2>
+        
+        <div class="story-layout">
+            <!-- Story 1: Divine Birth -->
+            <div class="story-card reveal">
+                <div class="story-content">
+                    <span class="legend-tag" data-i18n="tag_puranic">Shiva Purana Tradition</span>
+                    <h3>
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+                        <span data-i18n="story1_title">The Divine Birth from Turmeric</span>
+                    </h3>
+                    <p data-i18n="story1_p1">Loading...</p>
+                    <p data-i18n="story1_p2">Loading...</p>
+                </div>
+            </div>
+
+            <!-- Story 2: Writing the Mahabharata -->
+            <div class="story-card reveal">
+                <div class="story-content">
+                    <span class="legend-tag" data-i18n="tag_epic">Epic Tradition</span>
+                    <h3>
+                        <svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+                        <span data-i18n="story2_title">Writing the Mahabharata (The Broken Tusk)</span>
+                    </h3>
+                    <p data-i18n="story2_p1">Loading...</p>
+                    <p data-i18n="story2_p2">Loading...</p>
+                </div>
+            </div>
+
+            <!-- Story 3: Matching Title & Content: The Heat & Symbolism of Visarjan -->
+            <div class="story-card reveal">
+                <div class="story-content">
+                    <span class="legend-tag" data-i18n="tag_legend">Traditional Legend & Philosophy</span>
+                    <h3>
+                        <svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                        <span data-i18n="story3_title">The Cosmic Heat & The Sacred Symbolism of Visarjan</span>
+                    </h3>
+                    <p data-i18n="story3_p1">Loading...</p>
+                    <p data-i18n="story3_p2">Loading...</p>
+                </div>
+            </div>
+
+            <!-- Story 4: Historical Context of Public Ganeshotsav -->
+            <div class="story-card reveal">
+                <div class="story-content">
+                    <span class="legend-tag" data-i18n="tag_history">Historical Heritage</span>
+                    <h3>
+                        <svg viewBox="0 0 24 24"><path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"/></svg>
+                        <span data-i18n="story4_title">Evolution of Sarvajanik Ganeshotsav & Lokmanya Tilak</span>
+                    </h3>
+                    <p data-i18n="story4_p1">Loading...</p>
+                    <p data-i18n="story4_p2">Loading...</p>
+                </div>
             </div>
             
-            <div class="space-y-5">
-                <div class="relative">
-                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                        <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
-                    </div>
-                    <input type="text" id="firstName" placeholder="Enter first name..." 
-                        class="w-full pl-11 pr-4 py-3 bg-gray-950/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all shadow-sm">
-                </div>
-                
-                <p class="text-gray-400 text-sm text-center">
-                    Enter a name, or enter <strong class="text-amber-400 cursor-pointer hover:underline" onclick="document.getElementById('firstName').value='friendship'; checkName();">friendship</strong> for details on the importance of this day.
-                </p>
-                
-                <p id="error-message" class="text-rose-400 text-sm hidden font-medium flex items-center gap-2 bg-rose-500/10 p-2 rounded border border-rose-500/20">
-                    <i class="fa-solid fa-circle-exclamation"></i><span>Name not found in database.</span>
-                </p>
-                
-                <button onclick="checkName()" 
-                    class="w-full bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-gray-950 font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-amber-900/20">
-                    Proceed <i class="fa-solid fa-chevron-right text-sm"></i>
-                </button>
+            <!-- Regional Celebrations -->
+            <div class="regional-summary reveal">
+                <h3 data-i18n="regional_title">A Harmonious Celebration Across Bharat</h3>
+                <p data-i18n="regional_text">Loading...</p>
             </div>
         </div>
-    </main>
+    </section>
 
-    <!-- Info Site View (Document/Article Style) -->
-    <main class="flex-grow items-start justify-center p-6 md:p-12 z-10 hidden w-full relative pt-24 md:pt-32" id="dashboard-view">
-        
-        <article class="w-full max-w-3xl mx-auto pb-16">
+    <section id="ashtavinayaka">
+        <div class="container">
+            <h2 class="reveal" data-i18n="section_avatars_title">The 8 Puranic Avatars of Lord Ganesha</h2>
             
-            <!-- Abstract celebratory image -->
-            <div class="w-full h-48 md:h-64 rounded-2xl overflow-hidden relative mb-12 shadow-2xl border border-gray-800 fade-in">
-                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop" alt="Celebration Lights" class="absolute inset-0 w-full h-full object-cover opacity-50 hover:scale-105 transition-transform duration-700 mix-blend-screen">
-                
-                <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-[#020617]/60 to-transparent"></div>
-                
-                <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                    <span class="px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold tracking-widest uppercase mb-4 backdrop-blur-sm shadow-sm">
-                        Specialy Made for you.
-                    </span>
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500 drop-shadow-lg tracking-tight">
-                        Happy Friendship Day!
-                    </h2>
+            <div class="avatars8-grid" id="avatars8-container">
+                <!-- JS dynamically renders the 8 Puranic Avatars -->
+            </div>
+
+            <!-- Compact Pilgrimage Circuit -->
+            <div style="margin-top: 4.5rem;" class="reveal">
+                <h3 style="text-align: center; color: var(--deep-red); font-size: 1.5rem; margin-bottom: 0.3rem;">Maharashtra Ashtavinayaka Pilgrimage</h3>
+                <p style="text-align: center; font-size: 0.95rem; color: #666; margin-bottom: 1.5rem;">The legendary eight self-manifested (svayambhu) temples situated around Pune.</p>
+                <div class="pilgrimage-grid">
+                    <div class="pilgrim-card"><h5>Moreshwar</h5><span>Morgaon</span></div>
+                    <div class="pilgrim-card"><h5>Siddhivinayak</h5><span>Siddhatek</span></div>
+                    <div class="pilgrim-card"><h5>Ballaleshwar</h5><span>Pali</span></div>
+                    <div class="pilgrim-card"><h5>Varadavinayak</h5><span>Mahad</span></div>
+                    <div class="pilgrim-card"><h5>Chintamani</h5><span>Theur</span></div>
+                    <div class="pilgrim-card"><h5>Girijatmaj</h5><span>Lenyadri</span></div>
+                    <div class="pilgrim-card"><h5>Vighnahar</h5><span>Ozar</span></div>
+                    <div class="pilgrim-card"><h5>Mahaganapati</h5><span>Ranjangaon</span></div>
                 </div>
             </div>
 
-            <!-- Profile Header -->
-            <header class="mb-12 border-b border-gray-800 pb-8 fade-in delay-100">
-                <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-amber-400 mb-4 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
-                    <i class="fa-solid fa-award"></i> My friend
+            <!-- Clarification Note at the bottom and smaller -->
+            <div class="clarification-note reveal" data-i18n="avatars_clarification">
+                <strong>Note:</strong> The eight Puranic incarnations (Mudgala Purana) vanquishing internal demons are scripturally distinct from the geographical Ashtavinayaka Pilgrimage Circuit of Maharashtra shown above.
+            </div>
+        </div>
+    </section>
+
+    <section id="avatars">
+        <div class="container">
+            <h2 class="reveal" data-i18n="section_roops_title">The 32 Sacred Forms of Lord Ganesha</h2>
+            <p class="avatars-intro reveal" data-i18n="section_roops_sub">Preserved in ancient Agamic texts such as the <em>Mudgala Purana</em> and <em>Shritattvanidhi</em>, these thirty-two iconographic representations highlight the Supreme Lord's infinite grace, cosmic balance, and creative power.</p>
+            
+            <div class="filter-section reveal">
+                <div class="search-box">
+                    <input type="text" id="avatar-search" data-i18n-placeholder="search_placeholder" placeholder="Search forms by name, virtue, or meaning..." oninput="filterAvatars()">
+                    <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
                 </div>
-                <h1 id="display-fullname" class="text-4xl md:text-5xl font-bold text-white mb-3 tracking-tight">Name Surname</h1>
-                <p class="text-gray-400 text-sm md:text-base font-light">Friendshipday 2026</p>
-            </header>
 
-            <!-- Information Sections -->
-            <div class="space-y-12">
-                
-                <!-- Continuous Flowing Text Section (What I Like) -->
-                <section id="section-like" class="fade-in delay-200 pl-6 border-l-2 border-gray-700 hover:border-amber-400 transition-colors duration-300 group">
-                    <h2 class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-3 flex items-center gap-2 group-hover:text-amber-400 transition-colors">
-                        <i class="fa-solid fa-thumbs-up"></i> What I Like About You
-                    </h2>
-                    <p id="display-like" class="text-base md:text-lg text-gray-300 leading-relaxed font-light">
-                        INFORMATION goes here.
-                    </p>
-                </section>
-
-                <!-- Premium Cards Container -->
-                <div class="space-y-6 pt-6">
-                    
-                    <!-- Card: Thanksgiving (Warm/Amber Theme) -->
-                    <div id="section-thanks" class="fade-in delay-300 relative overflow-hidden border border-amber-900/40 rounded-2xl p-6 md:p-8 shadow-xl group transition-all duration-300 hover:border-amber-500/60">
-                        <!-- Background Theme Image -->
-                        <div class="absolute inset-0 z-0">
-                            <img src="https://images.unsplash.com/photo-1506804886640-379e436f56ce?auto=format&fit=crop&w=800&q=80" alt="Warm Autumn Glow" class="w-full h-full object-cover opacity-15 mix-blend-lighten group-hover:scale-105 transition-transform duration-700">
-                            <!-- Gradient Overlay -->
-                            <div class="absolute inset-0 bg-gradient-to-br from-amber-950/80 via-gray-950/90 to-gray-950/95"></div>
-                        </div>
-                        
-                        <!-- Content -->
-                        <div class="relative z-10">
-                            <h3 class="text-lg md:text-xl font-bold text-white mb-3 flex items-center gap-3 tracking-tight">
-                                <i class="fa-solid fa-hands-praying text-amber-500 drop-shadow-[0_0_10px_rgba(245,158,11,0.5)]"></i>
-                                <span id="title-thanks">Thanksgiving</span>
-                            </h3>
-                            <p id="display-thanks" class="text-gray-300 leading-relaxed font-light text-sm md:text-base">
-                                thxsec text goes here.
-                            </p>
-                        </div>
+                <div class="search-meta">
+                    <span id="results-count">Showing 32 of 32 Sacred Forms</span>
+                    <div class="category-chips">
+                        <button class="chip active" onclick="setCategory('all', this)" data-i18n="filter_all">All Forms</button>
+                        <button class="chip" onclick="setCategory('peaceful', this)" data-i18n="filter_peaceful">Child & Devotional</button>
+                        <button class="chip" onclick="setCategory('warrior', this)" data-i18n="filter_warrior">Protective & Valiant</button>
+                        <button class="chip" onclick="setCategory('tantric', this)" data-i18n="filter_tantric">Meditative & Tantric</button>
                     </div>
-
-                    <!-- Card: Funniest Moment (Playful/Fuchsia Theme) -->
-                    <div id="section-funny" class="fade-in delay-400 relative overflow-hidden border border-fuchsia-900/40 rounded-2xl p-6 md:p-8 shadow-xl group transition-all duration-300 hover:border-fuchsia-500/60">
-                        <!-- Background Theme Image -->
-                        <div class="absolute inset-0 z-0">
-                            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80" alt="Party Lights" class="w-full h-full object-cover opacity-15 mix-blend-lighten group-hover:scale-105 transition-transform duration-700">
-                            <!-- Gradient Overlay -->
-                            <div class="absolute inset-0 bg-gradient-to-br from-fuchsia-950/80 via-gray-950/90 to-gray-950/95"></div>
-                        </div>
-
-                        <!-- Content -->
-                        <div class="relative z-10">
-                            <h3 class="text-lg md:text-xl font-bold text-white mb-3 flex items-center gap-3 tracking-tight">
-                                <i class="fa-solid fa-face-smile-wink text-fuchsia-400 drop-shadow-[0_0_10px_rgba(232,121,249,0.5)]"></i>
-                                <span id="title-funny">Funniest Moment</span>
-                            </h3>
-                            <p id="display-funny" class="text-gray-300 leading-relaxed font-light text-sm md:text-base">
-                                FUNNY_INFO goes here.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Card: A Wish For You (Cosmic/Indigo Theme) -->
-                    <div id="section-wish" class="fade-in delay-500 relative overflow-hidden border border-indigo-900/40 rounded-2xl p-6 md:p-8 shadow-xl group transition-all duration-300 hover:border-indigo-400/60">
-                        <!-- Background Theme Image -->
-                        <div class="absolute inset-0 z-0">
-                            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80" alt="Starry Night Galaxy" class="w-full h-full object-cover opacity-20 mix-blend-screen group-hover:scale-105 transition-transform duration-700">
-                            <!-- Gradient Overlay -->
-                            <div class="absolute inset-0 bg-gradient-to-br from-indigo-950/80 via-gray-950/90 to-gray-950/95"></div>
-                        </div>
-
-                        <!-- Content -->
-                        <div class="relative z-10">
-                            <h3 class="text-lg md:text-xl font-bold text-white mb-3 flex items-center gap-3 tracking-tight">
-                                <i class="fa-solid fa-star-and-crescent text-indigo-400 drop-shadow-[0_0_10px_rgba(129,140,248,0.5)]"></i>
-                                <span id="title-wish">A Wish For You</span>
-                            </h3>
-                            <p id="display-wish" class="text-gray-300 leading-relaxed font-light text-sm md:text-base">
-                                WISH_INFO goes here.
-                            </p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-        </article>
-    </main>
 
-    <!-- Footer -->
-    <footer class="w-full text-center py-6 mt-auto border-t border-gray-800 bg-gray-950/50 relative z-10 backdrop-blur-md">
-        <p class="text-gray-500 text-sm">
-            Developed by <span class="text-amber-500 font-bold tracking-wide">Soham Deshmukh</span>
-        </p>
+            <div class="forms-grid" id="avatars-container">
+                <!-- JS dynamically renders 32 cards in responsive multi-column grid -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 0.8rem; color: var(--gold);">
+                    <svg viewBox="0 0 512 512" style="fill: var(--gold);"><path d="M256,0 C167.6,0 96,71.6 96,160 C96,183.8 101.4,206.2 110.8,226.3 C86.5,233.1 68,255.4 68,282.6 C68,314.9 94.3,341.3 126.6,341.3 C132.3,341.3 137.8,340.4 143,338.8 C144.1,388.5 185.3,428.6 235.6,428.6 L235.6,469.3 C235.6,492.8 254.8,512 278.3,512 C301.8,512 321,492.8 321,469.3 L321,419.6 C362.4,402.7 392.2,363.3 396.4,316.6 C422.3,311.1 442,288.1 442,260.6 C442,229.4 416.7,204.1 385.5,204.1 C383.1,204.1 380.8,204.3 378.5,204.6 C373.9,189.6 371.3,174 371.3,158 C371.3,70.7 296.3,0 256,0 Z M256,42.6 C285.8,42.6 329.8,94.9 329.8,158 C329.8,172 327,185.5 322,198 C302.2,207.2 280,212.4 256.7,212.4 C218.4,212.4 183.2,198.8 156.4,175.7 C147.2,168.1 138.6,159.2 138.6,160 C138.6,96.3 192.3,42.6 256,42.6 Z" /></svg>
+                    <span data-i18n="footer_brand">Vighnaharta</span>
+                </div>
+                <p data-i18n="footer_desc">Dedicated to sharing authentic spiritual insights, scriptural origins, and cultural significance of Lord Ganesha with reverence and accuracy.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4 data-i18n="footer_links_title">Quick Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="#greetings" data-i18n="nav_home">Greetings</a></li>
+                    <li><a href="#stories-info" data-i18n="nav_stories">Sacred Lore</a></li>
+                    <li><a href="#ashtavinayaka" data-i18n="nav_avatars">8 Divine Avatars</a></li>
+                    <li><a href="#avatars" data-i18n="nav_roops">32 Sacred Forms</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4 data-i18n="footer_chant_title">Divine Invocation & Mantra</h4>
+                <div class="chant-box">
+                    <div class="chant-sanskrit">
+                        वक्रतुण्ड महाकाय सूर्यकोटिसमप्रभ ।<br>
+                        निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥
+                    </div>
+                    <div class="chant-translit">
+                        Vakratuṇḍa Mahākāya Sūryakoṭi Samaprabha |<br>
+                        Nirvighnaṁ Kuru Me Deva Sarva-Kāryeṣu Sarvadā ||
+                    </div>
+                    <!-- Corrected traditional spelling: ॐ गं गणपतये नमः -->
+                    <div class="bija-mantra">ॐ गं गणपतये नमः</div>
+                    <div class="bija-translit">Om Gaṁ Gaṇapataye Namaḥ</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="developer-credit">
+            Developed with devotion by <span>Soham Deshmukh</span> | Ganesh Chaturthi
+        </div>
     </footer>
 
     <script>
-        // ==========================================
-        // SOHAM, ENTER YOUR INFORMATION HERE!
-        // To hide a section for a friend, just leave the text empty like this: ""
-        // ==========================================
-        
-        const friendsData = {
-            "rudra": { fullName: "Rudra Bharad", like: "Rudra is my best friend. He is very kind and always helps others but he talks too much about nonsence topic but i like them and he's very good at music drawing anime drawings.", thanks: "Thank you bro that youbecome my friend and made my school life better than I expected", funny: "I enjoyed the moment when he came to my home and we laughed too much on my jokes.", wish: "I wish that you'll always be happy and successful." },
-            "ridhima": { fullName: "Ridhima Shevadkar", like: "Ridhima has always has a unique perspective on things. I like her perspective of Helping others and very kind to others. She is very creative.", thanks: "Thanks for being my friend! and making our friends' school life better than they expected", funny: "I always enjoy roasting or rage bitting her.", wish: "I wish for you to always be happy and successful." },
-            "aanika": { fullName: "Aanika Kangude", like: "Aanika has a unique perspective on things. She likes to sketch, play badminton, explore places and do more creative things. She is very clever, very kind and intelligent too.", thanks: "Thanks for being my friend! You are an amazing friend.", funny: "I enjoy when we laugh while playing. like it is a memes, mimicry, jokes or moments.", wish: "I wish for you to always be happy and successful in any career you wanna make." },
-            "kashika": { fullName: "Kashika Shingi", like: "Kashika is very clever. She likes to play badminton, explore places and do more creative things. but she gets angry easily. still she is very kind and always helps others.", thanks: "Thanks for being my friend! You are an amazing friend.", funny: "I enjoy when you start a very funny quarell", wish: "I wish for you to always be happy and successful in any career you wanna make." },
-            "sharvari": { fullName: "Sharvari Joshi", like: "Sharvari is very creative and always comes up with unique ideas. She likes to spend her time with her friends.She is very kind too but she fears of things which are not senceble to cry.", thanks: "Thanks for being my friend!", funny: "", wish: "i wish for you to always be happy and successful." },
-            "gayatri": { fullName: "Gayatri Kale", like: "Gayatri is very creative and always comes up with unique ideas and she always has a positive attitude. She likes to help others & learn new things. She shares her problem to everyone and finds solution and solves others problems too.", thanks: "Thanks for being my friend! and making our friends' our life better than we expected", funny: "I always enjoy to roast her and then make her happy again ", wish: "I wish for you to always be happy and successful in life." },
-            "naksh": { fullName: "Naksh Mankar", like: "Naksh is my one of best friends. He is very kind and always helps others. He is very funny and makes us enjoy the day. He's very intelligent, creative at making things.", thanks: "Thanks for being my friend! and making my life more funfull than I expected.", funny: "I enjoy when you start a very funy quarell", wish: "I wish that you'll become successful in every career you choose" },
-            "haaresh": { fullName: "Haaresh Borse", like: "Hareesh is one of my best friends. He is a very funny person. who makes us laugh when we play anything. He likes to play roblox and minecraft. He likes to draw and too creative in that. He's very intelligent and clever too.", thanks: "Thanks for being my friend! and making my life more funfull than I expected.", funny: "I enjoy when we laugh on a meme, mimicry or jokes.", wish: "I wish that you'll always be happy and successful in any career you choose." },
-            "harsheel": { fullName: "Harsheel Borse", like: "Harsheel is one of my best friends. He's too serious about everything. He likes to play roblox and likes to play games. He's Creative, kind & intelligent. He always helps others.", thanks: "Thanks for being my friend! and making my life better than I expected.", funny: "I enjoy when we laugh on a meme, mimicry or jokes.", wish: "I wish that you'll always be happy and successful in any career you choose." },
-            "vedant": { fullName: "Vedant Kandhare", like: "Vedant is my one of best friends. He is very kind and always helps others. He is very funny and makes us enjoy the day.", thanks: "Thanks for being my friend! and making my life more funfull", funny: "When we were enjoying while drawing in elementary extra classes.", wish: "I wish for you to always be happy and successful." },
-            "sarthak": { fullName: "Sarthak Parge", like: "Sarthak is my one of best friends. He is very kind and always helps others. He is very funny and makes us enjoy", thanks: "Thanks for being my friend! and making my life more funfull", funny: "When we were enjoying while drawing in elementary extra classes.", wish: "I wish for you to always be happy and successful." },
-            
-            // Example of conditional hiding: Dhaval's "funny" is empty, so the entire Funniest Moment card will disappear!
-            "dhaval": { fullName: "Dhaval Jadhav", like: "Dhaval is my best friend. He is very kind and always helps others. He makes me laugh and enjoys it too.", thanks: "Thanks for being my friend! and making my life better than I expected", funny: "", wish: "I wish that you'll always be happy and successful in you entire life. " },
-            
-            "neal": { fullName: "Neal Kadam", like: "Neal is my best friend. He likes to make everyone laugh. When he's in mood of Masti, he's the most fun! and when he's serious, he's the most serious. He always listens to everyone not in his mood.", thanks: "I thank to you for being by friend & making my school life better.", funny: "", wish: "I wish that you'll always be happy and successful." },
-            "soham": { fullName: "Soham Deshmukh", like: "This layout features premium dynamically named cards with an animated background.", thanks: "Thanks for the feedback to make it better.", funny: "Re-coding the site multiple times.", wish: "Enjoy the new seamless reading experience." },
-            
-            // The 15th Section
-            "friendship": { 
-                fullName: "The Importance of Friendship", 
-                like: "Friendship is the invisible thread that binds our hearts together. It gives us a chosen family, providing unconditional support, comfort, and a safe space to be entirely ourselves without fear of judgment.", 
-                thanks: "Today is a day to express profound gratitude for those who stand by us. We give thanks for the shoulders to cry on, the hands that lift us up, and the hearts that understand us even when we are silent.", 
-                funny: "Beyond the serious moments, friendship is built on shared laughter, ridiculous inside jokes, and memories of times we laughed so hard we couldn't breathe. These joyous moments are the fuel that keeps the bond alive.", 
-                wish: "May Friendship Day 2026 remind us all to cherish these invaluable connections. Take a moment today to reach out, reconnect, and celebrate the beautiful souls who make your life's journey worthwhile." 
+        const i18nData = {
+            "en": {
+                "nav_brand": "Vighnaharta",
+                "nav_home": "Greetings",
+                "nav_stories": "Sacred Lore",
+                "nav_avatars": "8 Divine Avatars",
+                "nav_roops": "32 Sacred Forms",
+                "hero_title": "Happy Ganesh Chaturthi",
+                "hero_subtitle": "May Lord Ganesha remove all obstacles from your path and bless you with infinite wisdom, health, and prosperity.",
+                "section_stories_title": "Divine Legends & Sacred Lore",
+                "tag_puranic": "Shiva Purana Tradition",
+                "tag_epic": "Epic Tradition",
+                "tag_legend": "Traditional Legend & Philosophy",
+                "tag_history": "Historical Heritage",
+                "story1_title": "The Divine Birth from Turmeric",
+                "story1_p1": "The Shiva Purana recounts that Goddess Parvati created Ganesha from sacred turmeric paste (ubtan) while preparing for her bath, breathing life into the form and stationing him as her loyal guardian. When Lord Shiva returned, the devoted boy fulfilled his mother's command by barring entry, leading to an intense confrontation.",
+                "story1_p2": "Upon learning the child was Parvati's creation, Shiva restored him by placing the head of a noble elephant oriented towards the auspicious north. He blessed the child as Ganesha—commander of the divine attendants (Ganas)—and ordained that he be worshipped first ('Prathamesh') at the inauguration of any auspicious undertaking.",
+                "story2_title": "Writing the Mahabharata (The Broken Tusk)",
+                "story2_p1": "When the great sage Ved Vyasa sought a scribe capable of transcribing the grand epic Mahabharata, Lord Ganesha accepted under the condition that Vyasa must dictate without pause. Vyasa countered that Ganesha must fully contemplate and comprehend each verse before inscribing it.",
+                "story2_p2": "During this intense dictation, Ganesha's reed stylus suddenly broke. Dedicated to keeping his vow without interrupting the cosmic flow of knowledge, he sacrificed his own right tusk, dipped it in ink, and resumed writing. This celebrated sacrifice for wisdom earned him the revered epithet 'Ekadanta' (The One-Tusked).",
+                "story3_title": "The Cosmic Heat & The Sacred Symbolism of Visarjan",
+                "story3_p1": "According to devotional folklore, transcribing the profound epic over ten continuous days generated immense mental and cosmic heat in Lord Ganesha's divine body. To cool him, Sage Vyasa anointed him with cooling clay, fragrant sandalwood paste, and sacred Durva grass, giving the Lord a radiant crimson-ochre hue.",
+                "story3_p2": "On Anant Chaturdashi, the writing was completed, and the Lord was reverently immersed in sacred water to soothe his form completely. Philosophically, Ganesh Visarjan embodies the sublime Hindu truth of cyclical creation and dissolution: the divine form crafted from Earth (clay) merges back into the formless, infinite Brahman through the water element (Jala-tattva), reminding devotees that life's challenges dissolve while divine grace remains ever-present.",
+                "story4_title": "Evolution of Sarvajanik Ganeshotsav & Lokmanya Tilak",
+                "story4_p1": "While Ganeshotsav had been celebrated domestically for centuries and enjoyed royal patronages under the Maratha Empire (including the era of Chhatrapati Shivaji Maharaj and the Peshwas), the late 19th century witnessed its momentous transformation into an organized public movement.",
+                "story4_p2": "In 1892, pioneers in Pune such as Bhausaheb Laxman Javale (Bhau Rangari) initiated public idol installations. In 1893, freedom fighter Lokmanya Bal Gangadhar Tilak astutely recognized its unifying power. Through his newspaper 'Kesari', Tilak championed Sarvajanik Ganeshotsav to circumvent British bans on public gatherings, uniting citizens across caste and economic divides to cultivate patriotic resolve and cultural solidarity.",
+                "regional_title": "A Harmonious Celebration Across Bharat",
+                "regional_text": "From the electrifying Dhol-Tasha processions and monumental pandals of Maharashtra to the clay idols (Mati-Ganapati) of Goa, Karnataka's grand heritage shrines, and deep domestic rituals in Andhra Pradesh, Telangana, and Tamil Nadu, Ganesh Chaturthi unites the subcontinent. Across every state, devotees echo the universal chant: 'Ganpati Bappa Morya, Pudhchya Varshi Lavkar Ya!'",
+                "section_avatars_title": "The 8 Puranic Avatars of Lord Ganesha",
+                "avatars_clarification": "<strong>Note:</strong> The eight Puranic incarnations (Mudgala Purana) vanquishing internal demons are scripturally distinct from the geographical Ashtavinayaka Pilgrimage Circuit of Maharashtra shown above.",
+                "section_roops_title": "The 32 Sacred Forms of Lord Ganesha",
+                "section_roops_sub": "Preserved in ancient Agamic texts such as the Mudgala Purana and Shritattvanidhi, these thirty-two iconographic representations highlight the Supreme Lord's infinite grace, cosmic balance, and creative power.",
+                "pilgrimage_title": "Maharashtra's Ashtavinayaka Yatra",
+                "pilgrimage_sub": "The traditional pilgrimage of eight self-manifested (Swayambhu) temples.",
+                "search_placeholder": "Search forms by name, virtue, or meaning...",
+                "filter_all": "All Forms",
+                "filter_peaceful": "Child & Devotional",
+                "filter_warrior": "Protective & Valiant",
+                "filter_tantric": "Meditative & Tantric",
+                "footer_brand": "Vighnaharta Portal",
+                "footer_desc": "Dedicated to sharing authentic spiritual insights, scriptural origins, and cultural significance of Lord Ganesha with reverence and accuracy.",
+                "footer_links_title": "Quick Navigation",
+                "footer_chant_title": "Divine Invocation & Mantra"
+            },
+            "hi": {
+                "nav_brand": "विघ्नहर्ता",
+                "nav_home": "स्वागत",
+                "nav_stories": "पवित्र कथाएँ",
+                "nav_avatars": "8 दिव्य अवतार",
+                "nav_roops": "32 पवित्र रूप",
+                "hero_title": "शुभ गणेश चतुर्थी",
+                "hero_subtitle": "भगवान श्री गणेश आपके मार्ग की समस्त बाधाओं को दूर करें और आपको अनंत ज्ञान, स्वास्थ्य एवं समृद्धि का आशीर्वाद दें।",
+                "section_stories_title": "दिव्य कथाएँ और पौराणिक मान्यताएँ",
+                "tag_puranic": "शिव पुराण परंपरा",
+                "tag_epic": "महाकाव्य परंपरा",
+                "tag_legend": "पौराणिक आख्यायिका व दर्शन",
+                "tag_history": "ऐतिहासिक धरोहर",
+                "story1_title": "उबटन से दिव्य जन्म",
+                "story1_p1": "शिव पुराण के अनुसार, माता पार्वती ने स्नान पूर्व अपनी देह के उबटन (हल्दी लेप) से एक निष्ठावान बालक का सृजन किया और उसमें प्राण फूँककर द्वार-रक्षक नियुक्त किया। जब देवाधिदेव शिव पधारे, तो बालक ने आज्ञापालन करते हुए उन्हें रोका, जिससे दोनों पक्षों में युद्ध छिड़ गया।",
+                "story1_p2": "पार्वती के विलाप को शांत करने और बालक को पुनर्जीवित करने हेतु शिवजी ने उत्तर दिशा की ओर मुख किए हुए गजमुख को बालक के धड़ से जोड़ा। उन्होंने बालक को गणों का अधिपति 'गणेश' घोषित किया और वरदान दिया कि किसी भी मंगल कार्य में उनकी पूजा सर्वप्रथम ('प्रथमेश') होगी।",
+                "story2_title": "महाभारत का लेखन (एकदंत की कथा)",
+                "story2_p1": "महर्षि वेदव्यास को महाभारत महाकाव्य लिपिबद्ध करने हेतु एक अद्वितीय मेधावी लेखक की आवश्यकता थी। श्री गणेश इस शर्त पर सहमत हुए कि व्यासजी बिना रुके निरंतर श्लोक बोलेंगे, जिस पर व्यासजी ने भी प्रति-शर्त रखी कि गणेशजी प्रत्येक श्लोक का गूढ़ अर्थ समझकर ही लिखेंगे।",
+                "story2_p2": "लेखन के मध्य अचानक गणेशजी की लेखनी टूट गई। ज्ञान के प्रवाह को खंडित न होने देने के संकल्प से उन्होंने अपना दाहिना दाँत तोड़कर स्याही में डुबोया और लेखन अविरल रखा। ज्ञान के लिए इस सर्वोच्च त्याग के कारण वे 'एकदंत' कहलाए।",
+                "story3_title": "ब्रह्मांडीय ताप और विसर्जन का आध्यात्मिक रहस्य",
+                "story3_p1": "लोकमान्यताओं के अनुसार, दस दिनों तक निरंतर गूढ़ श्लोकों को लिपिबद्ध करने से गणेशजी के शरीर में प्रचंड बौद्धिक व ब्रह्मांडीय ताप उत्पन्न हुआ। उन्हें शीतलता प्रदान करने हेतु महर्षि व्यास ने उन पर सुगंधित मिट्टी, शीतल अष्टगंध और दूर्वा का लेप लगाया।",
+                "story3_p2": "अनंत चतुर्दशी के दिन महाकाव्य पूर्ण होने पर उन्हें शीतल जल में विसर्जित किया गया। आध्यात्मिक दृष्टि से गणेश विसर्जन यह सनातन सत्य सिखाता है कि पार्थिव मिट्टी से निर्मित साकार रूप जल-तत्व के माध्यम से पुनः निराकार ब्रह्म में विलीन हो जाता है, जिससे जीवन के सारे कष्ट दूर हो जाते हैं।",
+                "story4_title": "सार्वजनिक गणेशोत्सव का इतिहास और लोकमान्य तिलक",
+                "story4_p1": "गणेश चतुर्थी सदियों से घरों में और मराठा साम्राज्य के दौरान (छत्रपति शिवाजी महाराज तथा पेशवाओं के समय) विशेष राज्याश्रय के साथ मनाई जाती थी। 19वीं सदी के अंत में इसका स्वरूप व्यापक सामाजिक आंदोलन में परिवर्तित हुआ।",
+                "story4_p2": "1892 में पुणे में भाऊसाहेब रंगारी (भाऊ लक्ष्मण जावले) आदि ने सार्वजनिक मंडप स्थापित किए। 1893 में लोकमान्य बाळ गंगाधर तिलक ने 'केसरी' पत्र के माध्यम से इसे संगठित रूप दिया। उन्होंने ब्रिटिश राज के प्रतिबंधों को निष्प्रभावी करते हुए सभी जातियों व वर्गों को राष्ट्र जागरण के मंच पर एकजुट किया।",
+                "regional_title": "संपूर्ण भारत में अखंड उत्सव",
+                "regional_text": "महाराष्ट्र के ढोल-ताशा और भव्य पंडालों से लेकर गोवा की माटी-गणेश परंपरा, कर्नाटक, आंध्र प्रदेश और तमिलनाडु के पारंपरिक अनुष्ठानों तक पूरा देश 'गणपति बाप्पा मोरया' के जयघोष से गूंज उठता है।",
+                "section_avatars_title": "मुद्गल पुराण के 8 दिव्य अवतार",
+                "avatars_clarification": "<strong>नोट:</strong> मुद्गल पुराण के आठ अवतार जो आंतरिक राक्षसों का वध करते हैं, वे ऊपर दर्शाए गए महाराष्ट्र के भौगोलिक अष्टविनायक तीर्थक्षेत्र से भिन्न हैं।",
+                "section_roops_title": "भगवान गणेश के 32 पवित्र रूप",
+                "section_roops_sub": "आगम ग्रंथों और श्रीतत्वनिधि में वर्णित ये बत्तीस स्वरूप भगवान गणेश की अनंत लीलाओं, रक्षात्मक शक्तियां और साधना-शैलियों को प्रकट करते हैं।",
+                "pilgrimage_title": "महाराष्ट्र की अष्टविनायक यात्रा",
+                "pilgrimage_sub": "आठ स्वयंभू मंदिरों की पारंपरिक तीर्थयात्रा।",
+                "search_placeholder": "रूप, गुण या नाम से खोजें...",
+                "filter_all": "सभी रूप",
+                "filter_peaceful": "बाल्य व भक्ति स्वरूप",
+                "filter_warrior": "वीर व रक्षक स्वरूप",
+                "filter_tantric": "ध्यान व तांत्रिक स्वरूप",
+                "footer_brand": "विघ्नहर्ता पोर्टल",
+                "footer_desc": "भगवान श्री गणेश के पावन ज्ञान, प्रामाणिक पौराणिक कथाओं और आध्यात्मिक गरिमा को समर्पित।",
+                "footer_links_title": "महत्वपूर्ण लिंक",
+                "footer_chant_title": "दिव्य मंत्र व वंदना"
+            },
+            "mr": {
+                "nav_brand": "विघ्नहर्ता",
+                "nav_home": "मुखपृष्ठ",
+                "nav_stories": "पवित्र कथा",
+                "nav_avatars": "८ दिव्य अवतार",
+                "nav_roops": "३२ पवित्र रूपे",
+                "hero_title": "गणेश चतुर्थीच्या हार्दिक शुभेच्छा",
+                "hero_subtitle": "भगवान श्री गणेश आपल्या मार्गातील सर्व विघ्ने दूर करोत आणि आपणास उत्तम आरोग्य, समृद्धी व अखंड ज्ञान देवोत.",
+                "section_stories_title": "दिव्य कथा आणि पौराणिक आख्यायिका",
+                "tag_puranic": "शिवपुराण परंपरा",
+                "tag_epic": "महाकाव्य परंपरा",
+                "tag_legend": "पारंपरिक आख्यायिका व तत्त्वज्ञान",
+                "tag_history": "ऐतिहासिक वारसा",
+                "story1_title": "उटीपासून दिव्य जन्म",
+                "story1_p1": "शिवपुराणानुसार, माता पार्वतीने स्नानापूर्वी स्वतःच्या अंगावरील उटण्यापासून एका बालकाची मूर्ती घडवून त्यात प्राण फुंकले आणि त्याला द्वाररक्षक नेमले. भगवान शंकरांचे आगमन झाल्यावर मातेच्या आज्ञेचे पालन करत बालकाने त्यांना अडवले, ज्यातून संघर्ष उद्भवला.",
+                "story1_p2": "पार्वतीचे दुःख दूर करण्यासाठी शिवाने उत्तर दिशेकडे मुख असलेल्या गजराजाचे मस्तक बालकाच्या धडावर बसवून त्याला पुनरुज्जीवित केले. त्याला सर्व गणांचा अधिपती 'गणेश' घोषित केले आणि कोणत्याही मंगलकार्यात सर्वप्रथम पूजा ('प्रथमेश') होण्याचा वर दिला.",
+                "story2_title": "महाभारताचे लेखन (एकदंताची कथा)",
+                "story2_p1": "महर्षी वेदव्यासांना महाभारत महाकाव्य लिहून काढण्यासाठी अत्यंत कुशाग्र लेखकाची गरज होती. व्यासांनी अखंड श्लोक सांगावेत या अटीवर गणेशाने हे कार्य स्वीकारले, तर गणेशाने प्रत्येक श्लोकाचा गूढ अर्थ समजूनच लिहावा अशी प्रति-अट व्यासांनी ठेवली.",
+                "story2_p2": "लेखन सुरू असताना अचानक लेखणी मोडली. ज्ञानाचा अखंड प्रवाह खंडित होऊ नये म्हणून गणपतीने क्षणाचाही विलंब न लावता आपला उजवा सुळा तोडला आणि शाईत बुडवून लेखन सुरू ठेवले. या त्यागामुळे त्यांना 'एकदंत' हे नाव मिळाले.",
+                "story3_title": "प्रचंड वैश्विक उष्णता आणि विसर्जनाचे तत्त्वज्ञान",
+                "story3_p1": "पारंपरिक कथेनुसार, सलग दहा दिवस अखंड महाकाव्य लिहिताना गणपतीच्या शरीरात प्रचंड बौद्धिक व वैश्विक उष्णता निर्माण झाली. ही उष्णता शांत करण्यासाठी महर्षी व्यासांनी त्यांच्या अंगावर सुवासिक माती, अष्टगंध आणि दुर्वांचा लेप लावला.",
+                "story3_p2": "अनंत चतुर्दशीला ग्रंथ पूर्ण झाल्यावर बाप्पांना शीतल जलाशयात विसर्जित करण्यात आले. तत्त्वज्ञानाच्या दृष्टीने, मातीपासून साकारलेली मूर्ती जलतत्त्वाद्वारे पुन्हा निराकार ब्रह्मात विलीन होते. हे प्रतीक दर्शवते की बाप्पा आपले सर्व ताप स्वतःमध्ये सामावून घेतात.",
+                "story4_title": "सार्वजनिक गणेशोत्सवाचा इतिहास आणि लोकमान्य टिळक",
+                "story4_p1": "गणेशोत्सव शतकानुशतके घराघरांमध्ये साजरा होत होता; तसेच छत्रपती शिवाजी महाराज आणि पेशव्यांच्या काळात त्याला मोठा राजाश्रय लाभला होता. मात्र १९व्या शतकाच्या अखेरीस या उत्सवाने स्वातंत्र्यलढ्यात जनआंदोलनाचे रूप घेतले.",
+                "story4_p2": "१८९२ मध्ये पुण्यात श्रीमंत भाऊसाहेब रंगारी यांनी सार्वजनिक गणेशोत्सवाची मुहूर्तमेढ रोवली. १८९३ मध्ये लोकमान्य बाळ गंगाधर टिळकांनी 'केसरी' पत्रातून या उत्सवाला देशव्यापी संघटन रूप दिले. ब्रिटिशांच्या सभाबंदीला छेद देत सर्व जाती-धर्माच्या लोकांना एकत्र आणण्याचे हे प्रभावी व्यासपीठ ठरले.",
+                "regional_title": "भारतभरातील एकसंध चैतन्य",
+                "regional_text": "महाराष्ट्रातील ढोल-ताशांचा गजर, गोव्यातील मातीचे गणपती, कर्नाटकातील भव्य उत्सव आणि दक्षिणेतील पारंपरिक पूजा या साऱ्यांमधून 'गणपती बाप्पा मोरया' हा एकच जयघोष सर्वत्र दुमदुमतो.",
+                "section_avatars_title": "मुद्गल पुराणोक्त ८ दिव्य अवतार",
+                "avatars_clarification": "<strong>टीप:</strong> मुद्गल पुराणातील आंतरिक राक्षसांचा नाश करणारे आठ अवतार हे वर दर्शविलेल्या महाराष्ट्रातील भौगोलिक अष्टविनायक तीर्थक्षेत्रांपेक्षा वेगळे आहेत.",
+                "section_roops_title": "भगवान गणेशाची ३२ पवित्र रूपे",
+                "section_roops_sub": "आगमशास्त्र आणि श्रीतत्वनिधीमध्ये वर्णन केलेली ही ३२ रूपे बाप्पांची अगाध कृपा, विविध आयुधे आणि वैश्विक शक्तींचे प्रकटीकरण करतात.",
+                "pilgrimage_title": "महाराष्ट्राची अष्टविनायक यात्रा",
+                "pilgrimage_sub": "आठ स्वयंभू मंदिरांची पारंपरिक तीर्थयात्रा.",
+                "search_placeholder": "नावाने किंवा गुणाने रूपे शोधा...",
+                "filter_all": "सर्व रूपे",
+                "filter_peaceful": "बाल्य व भक्ती रूपे",
+                "filter_warrior": "वीर व रक्षक रूपे",
+                "filter_tantric": "ध्यान व तांत्रिक रूपे",
+                "footer_brand": "विघ्नहर्ता पोर्टल",
+                "footer_desc": "श्री गणेशाचे प्रामाणिक ज्ञान, पवित्र इतिहास आणि आध्यात्मिक महत्त्व जपण्यासाठी समर्पित.",
+                "footer_links_title": "महत्त्वाच्या लिंक्स",
+                "footer_chant_title": "दिव्य मंत्र व वंदना"
             }
         };
 
-        // ==========================================
-        // LOGIC - DO NOT EDIT BELOW UNLESS REQUIRED
-        // ==========================================
-        
-        const loginView = document.getElementById('login-view');
-        const dashboardView = document.getElementById('dashboard-view');
-        const errorMsg = document.getElementById('error-message');
-        const nameInput = document.getElementById('firstName');
-        const navReturn = document.getElementById('nav-return');
+        // --- POSITIVE SVG PATH DEFINITIONS ---
+        const positivePaths = {
+            lotus: "M12,22 C12,22 7,18 7,12 C7,9.2 8.6,6.7 11,5.5 C11,5.5 11.5,9 12,12 C12.5,9 13,5.5 13,5.5 C15.4,6.7 17,9.2 17,12 C17,18 12,22 12,22 Z",
+            modak: "M12 2C10 8 6 12 6 17C6 20.3 8.7 23 12 23C15.3 23 18 20.3 18 17C18 12 14 8 12 2ZM12 20C10.3 20 9 18.7 9 17C9 14.8 11.2 11.7 12 9.5C12.8 11.7 15 14.8 15 17C15 18.7 13.7 20 12 20Z",
+            diya: "M12,2.5 C12,2.5 10,7 10,10 C10,11.1 10.9,12 12,12 C13.1,12 14,11.1 14,10 C14,7 12,2.5 12,2.5 Z M12,13 C7.5,13 4,16.5 4,21 L20,21 C20,16.5 16.5,13 12,13 Z",
+            flower: "M12,22A10,10 0 1,1 22,12A10,10 0 0,1 12,22ZM12,4A8,8 0 1,0 20,12A8,8 0 0,0 12,4Z",
+            sun: "M12 17a5 5 0 100-10 5 5 0 000 10zm0-15v2m0 16v2M4 12H2m20 0h-2M6.34 6.34l-1.41-1.41m14.14 14.14l-1.41-1.41M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+        };
 
-        // Allow pressing Enter key to submit
-        nameInput.addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') {
-                checkName();
+        // --- STREAMING_CHUNK:Defining Mudgala Purana 8 Avatars Data... ---
+        const avatars8Data = [
+            {
+                id: 1,
+                name_en: "Vakratunda", name_hi: "वक्रतुण्ड", name_mr: "वक्रतुंड",
+                sub_en: "Vanquisher of Matsaryasura (Jealousy)", sub_hi: "मत्सरासुर का दमन (ईर्ष्या)", sub_mr: "मत्सरासुराचे निर्दालन (मत्सर)",
+                desc_en: "Manifested riding a majestic Lion to conquer Matsaryasura (the demon of jealousy and envy), restoring supreme harmony.",
+                desc_hi: "सिंह की सवारी करने वाले इस रूप ने ईर्ष्या व द्वेष के प्रतीक मत्सरासुर का संहार कर धर्म की स्थापना की।",
+                desc_mr: "सिंहावर स्वार झालेल्या या अवताराने मत्सर व असूयेचे प्रतीक असलेल्या मत्सरासुराचा पराभव केला.",
+                icon: positivePaths.sun 
+            },
+            {
+                id: 2,
+                name_en: "Ekadanta", name_hi: "एकदन्त", name_mr: "एकदंत",
+                sub_en: "Vanquisher of Madasura (Arrogance)", sub_hi: "मदासुर का दमन (अहंकार)", sub_mr: "मदासुराचे निर्दालन (गर्व/अहंकार)",
+                desc_en: "Riding a Mouse, this single-tusked avatar subdued Madasura, the embodiment of toxic pride and arrogance of power.",
+                desc_hi: "मूषक वाहन पर आरूढ़ एकदंत ने सत्ता व बल के घमंड से उन्मत्त मदासुर का मानमर्दन किया।",
+                desc_mr: "उंदरावर स्वार असलेल्या एकदंत अवताराने सत्ता आणि ताकदीच्या अहंकारात बुडालेल्या मदासुराला नमवले.",
+                icon: positivePaths.lotus 
+            },
+            {
+                id: 3,
+                name_en: "Mahodara", name_hi: "महोदर", name_mr: "महोदर",
+                sub_en: "Vanquisher of Mohasura (Delusion)", sub_hi: "मोहासुर का दमन (मोह व भ्रम)", sub_mr: "मोहासुराचे निर्दालन (मोह व आसक्ती)",
+                desc_en: "The great-bellied Lord who freed the universe from Mohasura, the demon of blind infatuation and material delusion.",
+                desc_hi: "विशाल उदर वाले इस रूप ने सांसारिक अंधी आसक्ति व भ्रम के प्रतीक मोहासुर को परास्त किया।",
+                desc_mr: "मोठे पोट असलेल्या महोदर रूपाने अंध आसक्ती व भ्रमाचे प्रतीक असलेल्या मोहासुराचा नायनाट केला.",
+                icon: positivePaths.flower 
+            },
+            {
+                id: 4,
+                name_en: "Gajanana", name_hi: "गजानन", name_mr: "गजानन",
+                sub_en: "Vanquisher of Lobhasura (Greed)", sub_hi: "लोभासुर का दमन (लालच)", sub_mr: "लोभासुराचे निर्दालन (लोभ)",
+                desc_en: "The elephant-faced Lord who defeated Lobhasura, the demon of insatiable greed, bestowing spiritual contentment.",
+                desc_hi: "गजमुख वाले प्रभु ने अतृप्त लालच के प्रतीक लोभासुर का नाश कर मानवता को संतोष का मार्ग दिखाया।",
+                desc_mr: "हत्तीचे मुख असलेल्या गजाननाने अमर्याद हव्यासाचे प्रतीक असलेल्या लोभासुराचा संहार केला.",
+                icon: positivePaths.modak 
+            },
+            {
+                id: 5,
+                name_en: "Lambodara", name_hi: "लम्बोदर", name_mr: "लंबोदर",
+                sub_en: "Vanquisher of Krodhasura (Anger)", sub_hi: "क्रोधासुर का दमन (क्रोध)", sub_mr: "क्रोधासुराचे निर्दालन (क्रोध/राग)",
+                desc_en: "Containing all universes within his belly, Lambodara conquered Krodhasura, the blind rage that destroys wisdom.",
+                desc_hi: "संपूर्ण सृष्टि को उदर में धारण करने वाले लम्बोदर ने विवेकहीन क्रोध के प्रतीक क्रोधासुर का दमन किया।",
+                desc_mr: "सकल ब्रह्मांड पोटात सामावून घेणाऱ्या लंबोदराने बुद्धीचा नाश करणाऱ्या क्रोधासुराला पराभूत केले.",
+                icon: positivePaths.diya 
+            },
+            {
+                id: 6,
+                name_en: "Vikata", name_hi: "विकट", name_mr: "विकट",
+                sub_en: "Vanquisher of Kamasura (Lust)", sub_hi: "कामासुर का दमन (वासना)", sub_mr: "कामासुराचे निर्दालन (अंध वासना)",
+                desc_en: "Riding a majestic Peacock, Vikata defeated Kamasura, subduing uncontrolled desires and sensory attachments.",
+                desc_hi: "मयूर पर सवार होकर विकट रूप ने अनियंत्रित कामवासना के प्रतीक कामासुर को परास्त किया।",
+                desc_mr: "मोरावर आरूढ होऊन विकट रूपाने अनियंत्रित कामवासनेचे प्रतीक असणाऱ्या कामासुराचा पराभव केला.",
+                icon: positivePaths.sun 
+            },
+            {
+                id: 7,
+                name_en: "Vighnaraja", name_hi: "विघ्नराज", name_mr: "विघ्नराज",
+                sub_en: "Vanquisher of Mamasura (Possessiveness)", sub_hi: "ममासुर का दमन (ममता/अहंकार)", sub_mr: "ममासुराचे निर्दालन ('माझेपणा'चा अहंकार)",
+                desc_en: "Mounted on the divine serpent Shesha, Vighnaraja destroyed Mamasura, the delusion of selfish possessiveness ('mine').",
+                desc_hi: "शेषनाग पर विराजमान विघ्नराज ने स्वार्थ और 'मेरा-तेरा' की संकीर्ण भावना (ममासुर) का नाश किया।",
+                desc_mr: "शेषनागावर स्वार होऊन विघ्नराजाने स्वार्थी आसक्ती आणि संकुचित 'माझेपणा'च्या ममासुराला संपवले.",
+                icon: positivePaths.lotus 
+            },
+            {
+                id: 8,
+                name_en: "Dhumravarna", name_hi: "धूम्रवर्ण", name_mr: "धूम्रवर्ण",
+                sub_en: "Vanquisher of Abhimanasura (False Pride)", sub_hi: "अभिमानासुर का दमन (अहंकार)", sub_mr: "अभिमानासुराचे निर्दालन (खोटा अभिमान)",
+                desc_en: "Having a smoky complexion, this avatar conquered Abhimanasura, subduing self-righteousness and egotism.",
+                desc_hi: "धूम्र वर्ण वाले इस रूप ने आत्मप्रशंसा व मिथ्या अहंकार के राक्षस अभिमानासुर का अंत किया।",
+                desc_mr: "धुरासारखा रंग असलेल्या या अवताराने खोट्या अभिमानाचे प्रतीक असलेल्या अभिमानासुराचा अंत केला.",
+                icon: positivePaths.diya 
             }
+        ];
+
+        // --- STREAMING_CHUNK:Defining Ashtavinayaka Pilgrimage Data... ---
+        const pilgrimageData = [
+            { id: 1, name_en: "Moreshwar", name_hi: "मयूरेश्वर", name_mr: "मयूरेश्वर", loc_en: "Morgaon", loc_hi: "मोरगांव", loc_mr: "मोरगाव" },
+            { id: 2, name_en: "Siddhivinayak", name_hi: "सिद्धिविनायक", name_mr: "सिद्धिविनायक", loc_en: "Siddhatek", loc_hi: "सिद्धटेक", loc_mr: "सिद्धटेक" },
+            { id: 3, name_en: "Ballaleshwar", name_hi: "बल्लाळेश्वर", name_mr: "बल्लाळेश्वर", loc_en: "Pali", loc_hi: "पाली", loc_mr: "पाली" },
+            { id: 4, name_en: "Varadavinayak", name_hi: "वरदविनायक", name_mr: "वरदविनायक", loc_en: "Mahad", loc_hi: "महाड", loc_mr: "महाड" },
+            { id: 5, name_en: "Chintamani", name_hi: "चिंतामणी", name_mr: "चिंतामणी", loc_en: "Theur", loc_hi: "थेऊर", loc_mr: "थेऊर" },
+            { id: 6, name_en: "Girijatmaj", name_hi: "गिरिजात्मज", name_mr: "गिरिजात्मज", loc_en: "Lenyadri", loc_hi: "लेण्याद्री", loc_mr: "लेण्याद्री" },
+            { id: 7, name_en: "Vighnahar", name_hi: "विघ्नहर", name_mr: "विघ्नहर", loc_en: "Ozar", loc_hi: "ओझर", loc_mr: "ओझर" },
+            { id: 8, name_en: "Mahaganapati", name_hi: "महागणपति", name_mr: "महागणपती", loc_en: "Ranjangaon", loc_hi: "रांजणगाव", loc_mr: "रांजणगाव" }
+        ];
+
+        // --- STREAMING_CHUNK:Defining 32 Sacred Forms Data with enriched iconography... ---
+        const ganeshaForms = [
+            {
+                id: 1, category: "peaceful",
+                name_en: "Bala Ganapati", name_hi: "बाल गणपति", name_mr: "बाल गणपती",
+                trans_en: "The Childlike Lord", trans_hi: "बाल स्वरूप", trans_mr: "बाल स्वरूप",
+                desc_en: "Radiating like the golden rising sun, he holds a mango, banana, jackfruit, and sugarcane. His trunk grasps a modak, representing childlike joy and agricultural abundance.",
+                desc_hi: "उगते सूर्य के समान लाल-स्वर्ण वर्ण वाले बाल गणपति हाथों में आम, केला, कटहल और गन्ना तथा सूंड में मोदक धारण करते हैं। यह रूप बच्चों के उत्तम स्वास्थ्य का प्रतीक है।",
+                desc_mr: "उगवत्या सूर्यासारख्या तेजस्वी वर्णाचे बाल गणपती हातात आंबा, केळे, फणस आणि ऊस धारण करतात. सोंडेत मोदक असून हे रूप बालकांच्या समृद्धीचे प्रतीक आहे.",
+                iconPath: positivePaths.sun
+            },
+            {
+                id: 2, category: "warrior",
+                name_en: "Taruna Ganapati", name_hi: "तरुण गणपति", name_mr: "तरुण गणपती",
+                trans_en: "The Youthful Lord", trans_hi: "युवा स्वरूप", trans_mr: "तरुण स्वरूप",
+                desc_en: "Brilliant red with eight arms bearing a noose, goad, modak, rose-apple, broken tusk, and paddy sprig, symbolizing vibrant energy and purposeful determination.",
+                desc_hi: "आठ भुजाओं वाले तरुण गणपति युवा ऊर्जा, अटूट साहस और लक्ष्य-साधना के प्रणेता हैं।",
+                desc_mr: "आठ हात असलेले तरुण गणपती तारुण्याचे चैतन्य, असीम धैर्य आणि लक्ष्यावर एकाग्रतेचे प्रतीक आहेत.",
+                iconPath: positivePaths.lotus
+            },
+            {
+                id: 3, category: "peaceful",
+                name_en: "Bhakti Ganapati", name_hi: "भक्ति गणपति", name_mr: "भक्ती गणपती",
+                trans_en: "The Devotional Lord", trans_hi: "भक्त स्वरूप", trans_mr: "भक्ती स्वरूप",
+                desc_en: "Shining like the full autumn moon, holding a coconut, mango, banana, and a vessel of sweet payasam, blessing devotees with serenity and unconditional devotion.",
+                desc_hi: "शरद पूर्णिमा के चंद्रमा समान श्वेत वर्ण, जो हाथों में नारियल, आम, केला और खीर का पात्र लिए शांत भक्ति प्रदान करते हैं।",
+                desc_mr: "शरद पौर्णिमेच्या चंद्रासारखा शुभ्र वर्ण असलेले भक्ती गणपती शुद्ध भक्ती आणि आंतरिक शांती प्रदान करतात.",
+                iconPath: positivePaths.diya
+            },
+            {
+                id: 4, category: "warrior",
+                name_en: "Vira Ganapati", name_hi: "वीर गणपति", name_mr: "वीर गणपती",
+                trans_en: "The Valiant Warrior", trans_hi: "योद्धा स्वरूप", trans_mr: "शूर योद्धा स्वरूप",
+                desc_en: "Sixteen-armed fearless commander bearing divine weapons including a spear, discus, bow, and mace, vanquishing spiritual ignorance and inner foes.",
+                desc_hi: "सोलह भुजाओं से अस्त्र-शस्त्र सुसज्जित वीर गणपति जीवन के समस्त भयों और अज्ञानता के अंधकार का संहार करते हैं।",
+                desc_mr: "सोळा हातांमध्ये दिव्य शस्त्रे धारण केलेले वीर गणपती मनातील सर्व प्रकारची भीती नष्ट करून निर्भयता देतात.",
+                iconPath: positivePaths.sun
+            },
+            {
+                id: 5, category: "peaceful",
+                name_en: "Shakti Ganapati", name_hi: "शक्ति गणपति", name_mr: "शक्ती गणपती",
+                trans_en: "The Powerful Protector", trans_hi: "शक्ति संपन्न", trans_mr: "शक्ती संपन्न",
+                desc_en: "Vermilion-hued, seated with Shakti on his left knee. He holds a garland, noose, and goad, offering the abhaya mudra for universal harmony.",
+                desc_hi: "देवी शक्ति के साथ विराजमान सिंदूरी रंग का यह स्वरूप परिवार में सुख-शांति व सकारात्मक सामर्थ्य प्रदान करता है।",
+                desc_mr: "शक्ती देवीसह विराजमान असलेले हे रूप जीवनात सुसंवाद, सामर्थ्य आणि सुरक्षिततेची भावना निर्माण करते.",
+                iconPath: positivePaths.lotus
+            },
+            {
+                id: 6, category: "tantric",
+                name_en: "Dwija Ganapati", name_hi: "द्विज गणपति", name_mr: "द्विज गणपती",
+                trans_en: "The Twice-Born Scholar", trans_hi: "ज्ञान स्वरूप", trans_mr: "ज्ञान स्वरूप",
+                desc_en: "White like the moon with four elephant heads. Holding a water vessel, prayer beads, and palm leaf scriptures, worshipped for supreme academic excellence.",
+                desc_hi: "चार गजमुख और श्वेत वर्ण वाले द्विज गणपति शास्त्र ज्ञान, वेदों के अध्ययन और बौद्धिक प्रखरता के संरक्षक हैं।",
+                desc_mr: "चार गजमुख असलेले हे श्वेतवर्णीय रूप शास्त्राभ्यास, विद्या आणि बुद्धिमत्तेच्या प्रगतीसाठी पूजले जाते.",
+                iconPath: positivePaths.flower
+            },
+            {
+                id: 7, category: "peaceful",
+                name_en: "Siddhi Ganapati", name_hi: "सिद्धि गणपति", name_mr: "सिद्धी गणपती",
+                trans_en: "Master of Accomplishment", trans_hi: "सिद्धि प्रदाता", trans_mr: "सिद्धी देणारे",
+                desc_en: "Golden-yellow, wielding an axe, sugarcane, bouquet, and mango. He commands the Ashta Siddhis, ensuring success in all righteous endeavors.",
+                desc_hi: "स्वर्ण वर्ण वाले सिद्धि गणपति अष्ट सिद्धियों के अधिष्ठाता हैं और साधकों को हर क्षेत्र में सफलता प्रदान करते हैं।",
+                desc_mr: "सोनेरी कांतीचे सिद्धी गणपती अष्टसिद्धींचे स्वामी असून सर्व शुभ प्रयत्नांना पूर्णत्व मिळवून देतात.",
+                iconPath: positivePaths.modak
+            },
+            {
+                id: 8, category: "tantric",
+                name_en: "Ucchhishta Ganapati", name_hi: "उच्छिष्ट गणपति", name_mr: "उच्छिष्ट गणपती",
+                trans_en: "Lord of Sacred Offerings", trans_hi: "तांत्रिक स्वरूप", trans_mr: "तांत्रिक स्वरूप",
+                desc_en: "A blue-complexioned esoteric Tantric form with six arms, holding a veena, pomegranate, blue lotus, and japa mala, revered for swift spiritual realization.",
+                desc_hi: "नील वर्ण वाले षडभुज उच्छिष्ट गणपति विशेष तांत्रिक साधनाओं और तीव्र आध्यात्मिक अनुभूतियों के केंद्र हैं।",
+                desc_mr: "निळ्या वर्णाचे हे तांत्रिक रूप सखोल साधना आणि आध्यात्मिक उन्नतीसाठी विशेष पूजनीय आहे.",
+                iconPath: positivePaths.diya
+            },
+            {
+                id: 9, category: "warrior",
+                name_en: "Vighna Ganapati", name_hi: "विघ्न गणपति", name_mr: "विघ्न गणपती",
+                trans_en: "Overcomer of Hardships", trans_hi: "बाधा निवारक", trans_mr: "संकट निवारक",
+                desc_en: "Golden-hued with eight arms holding a conch and chakra like Lord Vishnu, specifically invoked to dissolve formidable obstacles and afflictions.",
+                desc_hi: "विष्णु समान शंख व चक्र धारण करने वाले अष्टभुजाधारी विघ्न गणपति भीषण बाधाओं को पलक झपकते हर लेते हैं।",
+                desc_mr: "शंख-चक्रधारी विघ्न गणपती जीवनातील अत्यंत क्लिष्ट संकटे आणि विघ्ने मुळापासून नाहीशी करतात.",
+                iconPath: positivePaths.sun
+            },
+            {
+                id: 10, category: "peaceful",
+                name_en: "Kshipra Ganapati", name_hi: "क्षिप्र गणपति", name_mr: "क्षिप्र गणपती",
+                trans_en: "The Swift Bestower", trans_hi: "शीघ्र फलदाता", trans_mr: "त्वरित फल देणारे",
+                desc_en: "Brilliant red with an upward curling trunk cradling a pot of jewels (ratnakumbha), renowned for rapidly answering sincere prayers.",
+                desc_hi: "चमकदार लाल वर्ण और सूंड में रत्नकुंभ लिए क्षिप्र गणपति निष्कपट प्रार्थनाओं को शीघ्रता से स्वीकार करते हैं।",
+                desc_mr: "लाल वर्णाचे क्षिप्र गणपती सोंडेत रत्नकुंभ धारण करतात आणि भक्तांच्या हाकेला त्वरित धावून जातात.",
+                iconPath: positivePaths.flower
+            },
+            {
+                id: 11, category: "warrior",
+                name_en: "Heramba Ganapati", name_hi: "हेरम्ब गणपति", name_mr: "हेरंब गणपती",
+                trans_en: "Protector of the Humble", trans_hi: "निर्बलों के रक्षक", trans_mr: "दुर्बलांचे रक्षक",
+                desc_en: "Radiant white with five elephant heads representing the pancha-mahabhutas, mounted majestically on a Lion with ten protective arms.",
+                desc_hi: "पांच गजमुख और दस भुजाओं वाले हेरम्ब गणपति शेर पर सवार होकर निर्बलों की सब प्रकार से रक्षा करते हैं।",
+                desc_mr: "पाच मुखे असलेले हेरंब गणपती सिंहावर आरूढ होऊन सर्व दुर्बलांना अभय व संरक्षण देतात.",
+                iconPath: positivePaths.lotus
+            },
+            {
+                id: 12, category: "peaceful",
+                name_en: "Lakshmi Ganapati", name_hi: "लक्ष्मी गणपति", name_mr: "लक्ष्मी गणपती",
+                trans_en: "Bestower of Fortune", trans_hi: "समृद्धि प्रदाता", trans_mr: "समृद्धी देणारे",
+                desc_en: "Pure white complexion flanked by consorts Siddhi and Buddhi, carrying a parrot, pomegranate, and sword, bestowing virtuous prosperity.",
+                desc_hi: "श्वेत वर्णीय लक्ष्मी गणपति जीवन में सद्बुद्धि, ऐश्वर्य और व्यापार में सर्वतोमुखी समृद्धि प्रदान करते हैं।",
+                desc_mr: "शुभ्र कांतीचे लक्ष्मी गणपती ज्ञान, समाधान आणि वैभवाची अखंड कृपा भक्तांवर करतात.",
+                iconPath: positivePaths.modak
+            },
+            {
+                id: 13, category: "tantric",
+                name_en: "Maha Ganapati", name_hi: "महा गणपति", name_mr: "महा गणपती",
+                trans_en: "The Supreme Cosmic Lord", trans_hi: "परमेश्वर स्वरूप", trans_mr: "सर्वोच्च परमेश्वर",
+                desc_en: "Red like dawn with three eyes and ten arms, holding attributes of all major deities. The paramount deity of the Ganapatya tradition.",
+                desc_hi: "त्रिणेत्र और दस भुजाओं वाले महा गणपति गाणपत्य संप्रदाय के परम आराध्य व ब्रह्मांडीय शक्ति के केंद्र हैं।",
+                desc_mr: "तीन डोळे आणि दहा हात असलेले महागणपती गाणपत्य परंपरेतील सर्वोच्च दैवत मानले जातात.",
+                iconPath: positivePaths.sun
+            },
+            {
+                id: 14, category: "warrior",
+                name_en: "Vijaya Ganapati", name_hi: "विजय गणपति", name_mr: "विजय गणपती",
+                trans_en: "The Victorious Leader", trans_hi: "विजय प्रदाता", trans_mr: "विजय देणारे",
+                desc_en: "Mounted on his trotting mouse with a red complexion and four arms, ensuring triumph over challenges and righteous victory in life.",
+                desc_hi: "मूषक पर आरूढ़ विजय गणपति प्रत्येक धर्मयुद्ध, परीक्षा और कठिन उद्यम में विजय सुनिश्चित करते हैं।",
+                desc_mr: "उंदरावर स्वार असलेले विजय गणपती कठीण प्रसंगांवर मात करून प्रत्येक कार्यात यश मिळवून देतात.",
+                iconPath: positivePaths.diya
+            },
+            {
+                id: 15, category: "peaceful",
+                name_en: "Nritya Ganapati", name_hi: "नृत्य गणपति", name_mr: "नृत्य गणपती",
+                trans_en: "The Joyous Dancer", trans_hi: "आनंद नर्तक", trans_mr: "आनंद नर्तक",
+                desc_en: "Golden yellow dancing beneath the Kalpavriksha tree, holding an axe, noose, and modak, patron of fine arts, music, and divine ecstasy.",
+                desc_hi: "कल्पवृक्ष के तले नृत्यमग्न मुद्रा मेंNritya गणपति कला, संगीत और रचनात्मक प्रतिभा का विकास करते हैं।",
+                desc_mr: "कल्पवृक्षाखाली नृत्य करणारे हे सुवर्णरूपी गणपती कला, संगीत आणि सृजनशीलतेला आशीर्वाद देतात.",
+                iconPath: positivePaths.flower
+            },
+            {
+                id: 16, category: "tantric",
+                name_en: "Urdhva Ganapati", name_hi: "ऊर्ध्व गणपति", name_mr: "ऊर्ध्व गणपती",
+                trans_en: "Elevated Consciousness", trans_hi: "ऊर्ध्व चेतना", trans_mr: "उच्च चेतना",
+                desc_en: "Golden complexion with six arms seated in yogic embrace with Shakti, worshipped by yogis to awaken Kundalini and elevate consciousness.",
+                desc_hi: "छह भुजाओं वाले ऊर्ध्व गणपति कुंडलिनी जागरण और उच्चतर आध्यात्मिक चेतना के प्रदाता हैं।",
+                desc_mr: "सहा हातांचे ऊर्ध्व गणपती साधनेतील प्रगती आणि कुंडलिनी जागृतीसाठी पूजले जातात.",
+                iconPath: positivePaths.lotus
+            },
+            {
+                id: 17, category: "tantric",
+                name_en: "Ekakshara Ganapati", name_hi: "एकाक्षर गणपति", name_mr: "एकाक्षर गणपती",
+                trans_en: "The Primordial Omkara", trans_hi: "ॐ स्वरूप", trans_mr: "ॐ स्वरूप",
+                desc_en: "Red-complexioned and three-eyed in Padmasana, embodying the sacred syllable 'OM', revered for profound meditation and inner silence.",
+                desc_hi: "पद्मासन में विराजमान एकाक्षर गणपति प्रणव ॐ के साक्षात स्वरूप हैं, जो गहन ध्यान सिद्ध करते हैं।",
+                desc_mr: "पद्मासनातील हे तीन डोळ्यांचे रूप मूळ ओंकाराचे प्रतीक असून ध्यानामध्ये मन स्थिर करते.",
+                iconPath: positivePaths.modak
+            },
+            {
+                id: 18, category: "peaceful",
+                name_en: "Varada Ganapati", name_hi: "वरद गणपति", name_mr: "वरद गणपती",
+                trans_en: "The Compassionate Giver", trans_hi: "वरदान दाता", trans_mr: "वरदान देणारे",
+                desc_en: "Featuring a third eye and a crescent moon on his brow, holding a pot of honey, showering unconditional boons and inner tranquility.",
+                desc_hi: "मस्तक पर अर्धचंद्र धारण किए वरद गणपति भक्तों की समस्त सात्विक मनोकामनाएं पूर्ण करते हैं।",
+                desc_mr: "कपाळावर अर्धचंद्र असलेले वरद गणपती भक्तांच्या सर्व सात्त्विक मनोकामना पूर्ण करतात.",
+                iconPath: positivePaths.sun
+            },
+            {
+                id: 19, category: "tantric",
+                name_en: "Tryakshara Ganapati", name_hi: "त्र्यक्षर गणपति", name_mr: "त्र्यक्षर गणपती",
+                trans_en: "Lord of A-U-M", trans_hi: "अ-उ-म अधिपति", trans_mr: "अ-उ-म अधिष्ठाता",
+                desc_en: "Golden-hued with large fanning ears, holding a noose, goad, tusk, and mango, embodying the three phonetic pillars of the universe.",
+                desc_hi: "स्वर्ण वर्णी त्र्यक्षर गणपति ओंकार के तीन ध्वन्यात्मक भागों (अ-उ-म) के समन्वयक हैं।",
+                desc_mr: "ओंकाराच्या अ-उ-म या तिन्ही मात्रांचे प्रतीक असणारे हे रूप संपूर्ण सृष्टीचे सार दर्शवते.",
+                iconPath: positivePaths.diya
+            },
+            {
+                id: 20, category: "peaceful",
+                name_en: "Kshipra Prasada Ganapati", name_hi: "क्षिप्र प्रसाद गणपति", name_mr: "क्षिप्र प्रसाद गणपती",
+                trans_en: "The Swift Graciver", trans_hi: "शीघ्र कृपादाता", trans_mr: "त्वरित कृपा करणारे",
+                desc_en: "Crimson red on Kusha grass with a prominent belly containing the cosmos, granting swift peace and reconciliation in distress.",
+                desc_hi: "कुश घास पर आसीन यह रूप संकटों को शीघ्रता से दूर कर मन में शांति की प्रतिष्ठा करता है।",
+                desc_mr: "कुशासनावर विराजमान असलेले हे रूप संकटाच्या वेळी अत्यंत त्वरित कृपा करून मन शांत करते.",
+                iconPath: positivePaths.flower
+            },
+            {
+                id: 21, category: "peaceful",
+                name_en: "Haridra Ganapati", name_hi: "हरिद्रा गणपति", name_mr: "हरिद्रा गणपती",
+                trans_en: "The Golden Turmeric Lord", trans_hi: "हल्दी स्वरूप", trans_mr: "हळदीचे स्वरूप",
+                desc_en: "Radiant golden-yellow crafted symbolically of sacred turmeric, worshipped for health, auspicious beginnings, and neutralizing afflictions.",
+                desc_hi: "पूर्णतः पीतांबरधारी हरिद्रा गणपति आरोग्य, मांगलिक कार्य और ग्रह-दोषों के निवारण हेतु पूजे जाते हैं।",
+                desc_mr: "पिवळे वस्त्र परिधान केलेले हरिद्रा गणपती उत्तम आरोग्य आणि सर्व ग्रहांच्या दोषांचे निवारण करतात.",
+                iconPath: positivePaths.lotus
+            },
+            {
+                id: 22, category: "peaceful",
+                name_en: "Ekadanta Ganapati", name_hi: "एकदन्त गणपति", name_mr: "एकदंत गणपती",
+                trans_en: "The Selfless Scholar", trans_hi: "एकदंत स्वरूप", trans_mr: "एकदंत स्वरूप",
+                desc_en: "Blue complexion with a massive belly representing total cosmic absorption, reminding humanity of intellectual sacrifice.",
+                desc_hi: "नील वर्ण वाले एकदंत ज्ञान की अविरल साधना और अहंकार के विसर्जन का सर्वोच्च संदेश देते हैं।",
+                desc_mr: "निळ्या वर्णाचे एकदंत गणपती ज्ञानासाठी केलेल्या त्यागाची आणि सेवेची आठवण करून देतात.",
+                iconPath: positivePaths.modak
+            },
+            {
+                id: 23, category: "peaceful",
+                name_en: "Srishti Ganapati", name_hi: "सृष्टि गणपति", name_mr: "सृष्टी गणपती",
+                trans_en: "The Cosmic Creator", trans_hi: "सृजनकर्ता", trans_mr: "सृजनकर्ता",
+                desc_en: "Crimson-hued on a mouse holding a mango, tusk, noose, and goad, stimulating the creative spark in writers, artists, and innovators.",
+                desc_hi: "सृष्टि गणपति नवीन विचारों, कलात्मक रचनाओं और रचनात्मक उद्यमों को दिव्य स्फूर्ति प्रदान करते हैं।",
+                desc_mr: "सृष्टी गणपती नवनिर्मिती, कला, लेखन आणि संशोधक वृत्तीला अथांग प्रेरणा देतात.",
+                iconPath: positivePaths.sun
+            },
+            {
+                id: 24, category: "warrior",
+                name_en: "Uddanda Ganapati", name_hi: "उद्दण्ड गणपति", name_mr: "उद्दंड गणपती",
+                trans_en: "Enforcer of Cosmic Law", trans_hi: "धर्म रक्षक", trans_mr: "धर्म रक्षक",
+                desc_en: "Fierce red form with ten arms wielding a mace, discus, and sword, defending cosmic dharma and subduing malicious forces.",
+                desc_hi: "दस भुजाओं से सुसज्जित उद्दण्ड गणपति अधर्म का समूल नाश कर धर्म की मर्यादा स्थापित करते हैं।",
+                desc_mr: "दहा हातांमध्ये शस्त्रे असणारे उद्दंड गणपती अधर्माचा नाश करून न्यायाचे रक्षण करतात.",
+                iconPath: positivePaths.diya
+            },
+            {
+                id: 25, category: "peaceful",
+                name_en: "Rinamochana Ganapati", name_hi: "ऋणमोचन गणपति", name_mr: "ऋणमोचन गणपती",
+                trans_en: "Liberator from Debts", trans_hi: "ऋण मुक्ति दाता", trans_mr: "ऋणमुक्ती देणारे",
+                desc_en: "Crystal white skin in vibrant red silks, releasing devotees from financial debt, guilt, and recurring karmic entanglements.",
+                desc_hi: "स्फटिक श्वेत वर्ण वाले यह प्रभु भक्तों को आर्थिक कर्ज और पूर्वजन्म के कर्म बंधनों से मुक्त करते हैं।",
+                desc_mr: "पांढऱ्या स्फटिकासारखा वर्ण असलेले हे रूप सर्व प्रकारच्या कर्ज आणि कर्मबंधनातून मुक्ती देते.",
+                iconPath: positivePaths.flower
+            },
+            {
+                id: 26, category: "tantric",
+                name_en: "Dhundhi Ganapati", name_hi: "ढुंढि गणपति", name_mr: "ढुंढी गणपती",
+                trans_en: "The Sought-After Guide", trans_hi: "मार्गदर्शक स्वरूप", trans_mr: "मार्गदर्शक स्वरूप",
+                desc_en: "Red hue bearing a pot of gems and rudraksha beads, especially worshipped in Varanasi (Kashi) as the supreme guide to moksha.",
+                desc_hi: "काशी (वाराणसी) में विशेष पूज्य ढुंढि गणपति साधकों को भ्रम से निकालकर मोक्ष मार्ग दिखाते हैं।",
+                desc_mr: "काशी क्षेत्रात विशेष स्थान असणारे ढुंढी गणपती साधकाला मुक्तीचा खरा मार्ग दाखवतात.",
+                iconPath: positivePaths.lotus
+            },
+            {
+                id: 27, category: "tantric",
+                name_en: "Dvimukha Ganapati", name_hi: "द्विमुख गणपति", name_mr: "द्विमुख गणपती",
+                trans_en: "The Two-Faced Visionary", trans_hi: "द्विमुख स्वरूप", trans_mr: "दोन मुखांचे रूप",
+                desc_en: "Blue-green complexion with two faces seeing past and future simultaneously, guarding devotees from unseen deceptions.",
+                desc_hi: "दो मुख वाले यह रूप अंतःकरण और बाह्य जगत दोनों पर दृष्टि रखकर अदृश्य संकटों से बचाते हैं।",
+                desc_mr: "भूतकाळ आणि भविष्यकाळ दोन्हीकडे पाहू शकणारे हे द्विमुख रूप सर्व संकटांपासून रक्षण करते.",
+                iconPath: positivePaths.modak
+            },
+            {
+                id: 28, category: "tantric",
+                name_en: "Trimukha Ganapati", name_hi: "त्रिमुख गणपति", name_mr: "त्रिमुख गणपती",
+                trans_en: "Master of Three Dimensions", trans_hi: "त्रिमुख स्वरूप", trans_mr: "तीन मुखांचे रूप",
+                desc_en: "Three faces and six arms seated upon a golden lotus, mastering time (Trikala) and the three Gunas (Sattva, Rajas, Tamas).",
+                desc_hi: "स्वर्ण कमल पर आसीन त्रिमुख गणपति भूत, वर्तमान व भविष्य तीनों कालों पर पूर्ण अधिकार रखते हैं।",
+                desc_mr: "सोनेरी कमळावर बसलेले त्रिमुख गणपती तिन्ही काळ आणि तिन्ही गुणांचे नियमन करतात.",
+                iconPath: positivePaths.sun
+            },
+            {
+                id: 29, category: "warrior",
+                name_en: "Sinha Ganapati", name_hi: "सिंह गणपति", name_mr: "सिंह गणपती",
+                trans_en: "The Lion Commander", trans_hi: "सिंह सवारी", trans_mr: "सिंहावरील स्वारी",
+                desc_en: "Fair complexion seated on a fearless lion, holding eight arms that instill unshakeable moral courage and leadership.",
+                desc_hi: "शेर पर आरूढ़ सिंह गणपति साधक के हृदय में अद्वितीय आत्मबल और निडरता का संचार करते हैं।",
+                desc_mr: "सिंहावर आरूढ झालेले सिंह गणपती भक्तांमध्ये दुर्दम्य आत्मविश्वास आणि शौर्य निर्माण करतात.",
+                iconPath: positivePaths.diya
+            },
+            {
+                id: 30, category: "tantric",
+                name_en: "Yoga Ganapati", name_hi: "योग गणपति", name_mr: "योग गणपती",
+                trans_en: "The Meditative Ascetic", trans_hi: "योगेश्वर स्वरूप", trans_mr: "योगेश्वर स्वरूप",
+                desc_en: "Seated in unbroken Padmasana with knees bound in a yogapatta, glowing like the morning sun, guiding true yogic absorption.",
+                desc_hi: "योगपट्ट से बंधे ध्यानस्थ योग गणपति चित्त की वृत्तियों को शांत कर समाधि की अवस्था प्राप्त कराते हैं।",
+                desc_mr: "योगपट्टा बांधून ध्यानमग्न बसलेले योग गणपती मनाला पूर्ण शांत करून समाधी सुख देतात.",
+                iconPath: positivePaths.flower
+            },
+            {
+                id: 31, category: "warrior",
+                name_en: "Durga Ganapati", name_hi: "दुर्गा गणपति", name_mr: "दुर्गा गणपती",
+                trans_en: "The Invincible Shield", trans_hi: "अजेय स्वरूप", trans_mr: "अजिंक्य स्वरूप",
+                desc_en: "Deep golden hue carrying Goddess Durga's victorious bow, arrow, and flag, protecting devotees against calumny and malice.",
+                desc_hi: "देवी दुर्गा की अजेय शक्तियों को समाहित किए यह रूप गंभीर संकटों में अभेद्य ढाल बनता है।",
+                desc_mr: "देवी दुर्गेची अजिंक्य शक्ती धारण केलेले हे रूप संकटांच्या वादळात अभेद्य ढाल बनते.",
+                iconPath: positivePaths.lotus
+            },
+            {
+                id: 32, category: "peaceful",
+                name_en: "Sankatahara Ganapati", name_hi: "संकटहर गणपति", name_mr: "संकटहर गणपती",
+                trans_en: "Dispeller of All Afflictions", trans_hi: "संकटनाशक", trans_mr: "संकटनाशक",
+                desc_en: "Sun-like radiance seated on a crimson lotus holding a bowl of payasam and goad, celebrated on Sankashti Chaturthi for removing all suffering.",
+                desc_hi: "लाल कमल पर आसीन अंतिम रूप समस्त शारीरिक, मानसिक और भौतिक तापों का निवारण करता है।",
+                desc_mr: "लाल कमळावर विराजमान असलेले हे अंतिम रूप संकष्टी चतुर्थीला सर्व दुःखांचा समूळ नाश करते.",
+                iconPath: positivePaths.sun
+            }
+        ];
+
+        // --- STREAMING_CHUNK:Initializing state, responsive navigation, and canvas... ---
+        let currentLang = 'en';
+        let currentCategory = 'all';
+
+        // Prevent browser from restoring scroll position automatically
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            window.scrollTo(0, 0); // Force scroll to top on load
+            setTimeout(() => window.scrollTo(0, 0), 50); // Double-lock for mobile browsers
+            initScrollProgress();
+            initNavbar();
+            initHeroCanvas();
+            initScrollReveal();
+            
+            // Render initial state
+            updateLanguageUI();
+            renderAvatars8();
+            renderPilgrimage();
+            filterAvatars();
         });
 
-        function checkName() {
-            // Get value, trim whitespace, and convert to lowercase
-            const inputName = nameInput.value.trim().toLowerCase();
+        function initScrollProgress() {
+            window.addEventListener('scroll', () => {
+                const winScroll = document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                document.getElementById('progress-bar').style.width = scrolled + '%';
+            });
+        }
+
+        function initNavbar() {
+            const navbar = document.getElementById('navbar');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 40) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            mobileMenu.addEventListener('click', () => {
+                navbar.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
             
-            if(inputName === '') {
-                showError("Please enter a name first.");
+            document.querySelectorAll('.nav-links li a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navbar.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+
+        function initHeroCanvas() {
+            const canvas = document.getElementById('hero-canvas');
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+            
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            window.addEventListener('resize', resize);
+            resize();
+
+            class Particle {
+                constructor() {
+                    this.reset();
+                }
+                reset() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.size = Math.random() * 3 + 1;
+                    this.speedY = Math.random() * 0.8 + 0.3;
+                    this.speedX = (Math.random() - 0.5) * 0.5;
+                    this.color = Math.random() > 0.4 ? '#FFD700' : '#FF6B35';
+                    this.opacity = Math.random() * 0.7 + 0.2;
+                }
+                update() {
+                    this.y += this.speedY;
+                    this.x += this.speedX;
+                    if (this.y > canvas.height) {
+                        this.y = -5;
+                        this.x = Math.random() * canvas.width;
+                    }
+                }
+                draw() {
+                    ctx.fillStyle = this.color;
+                    ctx.globalAlpha = this.opacity;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.globalAlpha = 1;
+                }
+            }
+
+            for (let i = 0; i < 55; i++) {
+                particles.push(new Particle());
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => {
+                    p.update();
+                    p.draw();
+                });
+                requestAnimationFrame(animate);
+            }
+            animate();
+        }
+
+        function initScrollReveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            function check() {
+                const triggerBottom = window.innerHeight * 0.9;
+                reveals.forEach(el => {
+                    const top = el.getBoundingClientRect().top;
+                    if (top < triggerBottom) {
+                        el.classList.add('active');
+                    }
+                });
+            }
+            window.addEventListener('scroll', check);
+            check();
+        }
+
+        // --- STREAMING_CHUNK:Language switcher and dynamic UI update engine... ---
+        function switchLanguage(lang) {
+            currentLang = lang;
+            document.body.className = `lang-${lang}`;
+            updateLanguageUI();
+            renderAvatars8();
+            renderPilgrimage();
+            filterAvatars();
+        }
+
+        function updateLanguageUI() {
+            const dict = i18nData[currentLang];
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) {
+                    el.innerHTML = dict[key];
+                }
+            });
+
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (dict[key]) {
+                    el.setAttribute('placeholder', dict[key]);
+                }
+            });
+        }
+
+        function renderAvatars8() {
+            const container = document.getElementById('avatars8-container');
+            container.innerHTML = '';
+            
+            avatars8Data.forEach(item => {
+                const name = item[`name_${currentLang}`];
+                const sub = item[`sub_${currentLang}`];
+                const desc = item[`desc_${currentLang}`];
+                
+                const card = `
+                    <div class="avatar8-card reveal active">
+                        <div class="avatar8-icon">
+                            <svg viewBox="0 0 24 24"><path d="${item.icon}"/></svg>
+                        </div>
+                        <h4>${name}</h4>
+                        <div class="avatar8-sub">${sub}</div>
+                        <p>${desc}</p>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', card);
+            });
+            initScrollReveal();
+        }
+
+        function renderPilgrimage() {
+            const container = document.getElementById('pilgrimage-container');
+            if (!container) return;
+            container.innerHTML = '';
+            
+            pilgrimageData.forEach(item => {
+                const name = item[`name_${currentLang}`];
+                const loc = item[`loc_${currentLang}`];
+                
+                const card = `
+                    <div class="pilgrimage-card reveal active">
+                        <h4>${item.id}. ${name}</h4>
+                        <span>📍 ${loc}</span>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', card);
+            });
+            initScrollReveal();
+        }
+
+        // --- STREAMING_CHUNK:Filter and search logic with result count & empty state... ---
+        function setCategory(cat, btn) {
+            currentCategory = cat;
+            document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+            filterAvatars();
+        }
+
+        function filterAvatars() {
+            const searchBox = document.getElementById('avatar-search');
+            const query = (searchBox ? searchBox.value : '').toLowerCase().trim();
+            const container = document.getElementById('avatars-container');
+            const countEl = document.getElementById('results-count');
+            
+            const filtered = ganeshaForms.filter(item => {
+                const matchesCat = (currentCategory === 'all' || item.category === currentCategory);
+                const name = (item[`name_${currentLang}`] || '').toLowerCase();
+                const trans = (item[`trans_${currentLang}`] || '').toLowerCase();
+                const desc = (item[`desc_${currentLang}`] || '').toLowerCase();
+                const matchesSearch = !query || name.includes(query) || trans.includes(query) || desc.includes(query);
+                return matchesCat && matchesSearch;
+            });
+
+            // Update result counter
+            if (countEl) {
+                countEl.textContent = `Showing ${filtered.length} of ${ganeshaForms.length} Sacred Forms`;
+            }
+
+            container.innerHTML = '';
+
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state reveal active">
+                        <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        <h4>No Matching Sacred Forms</h4>
+                        <p>We could not find any form matching "${escapeHTML(query)}". Try another search keyword or select all forms.</p>
+                        <button class="btn-reset" onclick="resetFilters()">Reset Search</button>
+                    </div>
+                `;
                 return;
             }
 
-            if (friendsData.hasOwnProperty(inputName)) {
-                hideError();
-                populateData(friendsData[inputName], inputName);
-                
-                // Switch Views
-                loginView.classList.add('hidden');
-                loginView.classList.remove('flex');
-                
-                dashboardView.classList.remove('hidden');
-                dashboardView.classList.add('flex');
-                dashboardView.style.flexDirection = 'column';
-                
-                // Show Topbar Return Button
-                navReturn.classList.remove('hidden');
-                navReturn.classList.add('flex');
-                
-                // Scroll to top
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            } else {
-                showError("Name not found. Please verify spelling.");
-            }
+            filtered.forEach(item => {
+                const name = item[`name_${currentLang}`];
+                const trans = item[`trans_${currentLang}`];
+                const desc = item[`desc_${currentLang}`];
+
+                const cardHTML = `
+                    <div class="roop-card reveal active" onclick="this.classList.toggle('expanded')" title="Click to view details">
+                        <div class="roop-header">
+                            <div class="roop-number">${item.id}</div>
+                            <div class="roop-icon">
+                                <svg viewBox="0 0 24 24"><path d="${item.iconPath}"/></svg>
+                            </div>
+                            <div class="roop-title">
+                                <h3>${name}</h3>
+                                <span>${trans}</span>
+                            </div>
+                            <div class="expand-icon" aria-hidden="true">+</div>
+                        </div>
+                        <div class="roop-details">
+                            <p>${desc}</p>
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', cardHTML);
+            });
+            initScrollReveal();
         }
 
-        // Helper Function to handle displaying or hiding sections based on text content
-        function setupSection(idPrefix, dataContent, titleElement, titleText) {
-            const section = document.getElementById(`section-${idPrefix}`);
-            const display = document.getElementById(`display-${idPrefix}`);
-            
-            // If data is present and not empty, show it. Otherwise, completely hide the section.
-            if (dataContent && dataContent.trim() !== "") {
-                section.style.display = 'block';
-                display.textContent = dataContent;
-                if (titleElement) titleElement.textContent = titleText;
-            } else {
-                section.style.display = 'none';
-            }
+        function resetFilters() {
+            const searchBox = document.getElementById('avatar-search');
+            if (searchBox) searchBox.value = '';
+            setCategory('all', document.querySelector('.chip'));
         }
 
-        function populateData(data, inputKey) {
-            // Get just the first name for personalized titles
-            const firstName = data.fullName.split(" ")[0];
-
-            // Set main header
-            document.getElementById('display-fullname').textContent = data.fullName;
-
-            // Setup 'What I like' (no title changes needed for this one)
-            setupSection('like', data.like, null, null);
-
-            // Set personalized card titles and visibility dynamically
-            if (inputKey === "friendship") {
-                setupSection('thanks', data.thanks, document.getElementById('title-thanks'), "Thanksgiving");
-                setupSection('funny', data.funny, document.getElementById('title-funny'), "Funniest Moments");
-                setupSection('wish', data.wish, document.getElementById('title-wish'), "Our Wish");
-            } else {
-                setupSection('thanks', data.thanks, document.getElementById('title-thanks'), `Thanksgiving for ${firstName}`);
-                setupSection('funny', data.funny, document.getElementById('title-funny'), `${firstName}'s Funniest Moment`);
-                setupSection('wish', data.wish, document.getElementById('title-wish'), `A Wish For ${firstName}`);
-            }
-        }
-
-        function showError(msg) {
-            errorMsg.querySelector('span').textContent = msg;
-            errorMsg.classList.remove('hidden');
-            nameInput.classList.add('border-rose-500', 'focus:ring-rose-500');
-            nameInput.classList.remove('border-gray-700', 'focus:ring-amber-500');
-        }
-
-        function hideError() {
-            errorMsg.classList.add('hidden');
-            nameInput.classList.remove('border-rose-500', 'focus:ring-rose-500');
-            nameInput.classList.add('border-gray-700', 'focus:ring-amber-500');
-        }
-
-        function goBack() {
-            nameInput.value = '';
-            hideError();
-            
-            dashboardView.classList.add('hidden');
-            dashboardView.classList.remove('flex');
-            
-            loginView.classList.remove('hidden');
-            loginView.classList.add('flex');
-            
-            navReturn.classList.add('hidden');
-            navReturn.classList.remove('flex');
-            
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        function escapeHTML(str) {
+            return str.replace(/[&<>'"]/g, tag => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                "'": '&#39;',
+                '"': '&quot;'
+            }[tag] || tag));
         }
     </script>
 </body>
